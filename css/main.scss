@@ -1,0 +1,781 @@
+@import 'styles';
+@import "tempMain.css";
+
+
+//#center {
+//  text-align: center;
+//}
+
+//.basePanel {
+//  width: 100%;
+//}
+
+/* Login State */
+
+//#centerPanel {
+//  padding: 40px 0px 0px 0px ;
+//  margin : auto;
+//  width: 30%;
+//  background: orange;
+//}
+
+//#entry {
+//  height:600px;
+//  background: #dcdcdc;
+//}
+
+//.loginLabel {
+//  width:100%;
+//}
+
+//.floatRight{f
+//  float:right;
+//}
+
+//#libraries {
+//  display:none;
+//}
+
+//.entryPanelNavLink {
+//  text-decoration: underline;
+//  cursor: default;
+//}
+
+//#invitationPanelErrorMessage {
+//  color:gray;
+//}
+
+//div#spinner {
+//  display: none;
+//  background:url(../images/spinner.gif) no-repeat center;
+//  padding:32px;
+//  z-index:6000;
+//  right: 187px;
+//  position: relative;
+//  top: -4px;
+//}
+
+//.related-content-header {
+//  display:none
+//}
+
+/*End Login State*/
+
+
+/* Activity State */
+//$header-height: 32px;
+//$header-details-width: 10%;
+
+//.smallTabButton {
+//  @include tab-buttons (tab)
+//}
+
+//@mixin header-details-placement() {
+//  float:right;
+//  width: 10%;
+//  text-align: right;
+//  height: $header-height;
+//  line-height: $header-height;
+//}
+
+//#company-name {
+//  float:left;
+//  height:$header-height;
+//  line-height: $header-height;
+//  color: #FFFFFF;
+//}
+
+//#user-name {
+//  @include header-details-placement();
+//}
+//
+//#user-title {
+//  @include header-details-placement();
+//}
+
+//#settings {
+//  @include header-details-placement();
+//}
+
+//#search-panel {
+//  width:100%;
+//  height:134px;
+//  box-sizing: border-box;
+//  margin-bottom: 18px;
+//}
+
+//#account-panel {
+//  height:$header-height;
+//
+//}
+
+//$activity-view-height: 550px;
+
+//#nav-panel {
+//  width: 162px;
+//  height: $activity-view-height;
+//  float: left;
+//  box-sizing: border-box;
+//  margin-left: 12px;
+//  margin-right: 6px;
+//}
+
+//#results-panel {
+//  border: solid 1px;
+//  margin-left: 6px;
+//  min-width:4396px;
+//  min-height: $activity-view-height;
+//  float:left;
+//  box-sizing: border-box;
+//  overflow-y: scroll;
+//}
+
+//#notification-panel {
+//  border: solid 1px;
+//  width:266px;
+//  min-height: $activity-view-height;
+//  float:right;
+//  box-sizing: border-box;
+//  overflow-y: scroll;
+//}
+
+//#search-primary-container {
+//  position: relative;
+//  top: 50%;
+//  transform: translateY(-50%);
+//  width:98%;
+//  height:60px;
+//  margin: auto;
+//}
+
+//#search-primary-input {
+//  float:left;
+//  width:90%;
+//  height:60px;
+//  border: solid 1px;
+//  font-size: 16px;
+//}
+
+
+//#search-button-primary {
+//  width:7%;
+//  height:60px;
+//  float:right;
+//  line-height: 60px;
+//  text-align: center;
+//}
+
+//#search-panel-inline {
+//  float:left;
+//  position: relative;
+//  left:30%;
+//}
+
+//#aa {
+//  float:right;
+//}
+
+//#search-inline-input {
+//  float:left  ;
+//  border: 1px solid;
+//  height: 60px;
+//  //line-height: 30px;
+//  width:60px;
+//}
+
+//#search-inline-button {
+//  float:right;
+//  border: 1px solid;
+//  height: 30px;
+//  line-height: 30px;
+//}
+
+//#header {
+//  background-color: #0e415b;
+//}
+/* End Activity State */
+
+/* Start Charts */
+
+
+//.inline-block {
+//  display: inline-block;
+//}
+
+//.floatLeft {
+//  float:left;
+//}
+//.floatRight {
+//  float:right;
+//}
+
+.horizontalBarChart {
+  width:90%;
+  margin: 0px 0px 0px 10px;
+}
+
+.groupedHorizontalBarChart {
+  width:90%;
+  margin: 0px 0px 0px 10px;
+}
+
+#dynamicContentDiv {
+  margin: auto;
+  width:600px;
+}
+
+#dataTable {
+  width: 100%;
+  margin:10px;
+}
+
+.dropDownLabel {
+  padding-top: 6px;
+  margin: 0px 10px 0px 10px;
+  width: 75px;
+}
+
+.textAlignRight {
+  text-align: right;
+}
+
+
+/* Analytics Buttons */
+.analyticsButton  {
+  width: 140px;
+  height: 64px;
+  margin:10px 10px 20px 10px;
+}
+
+.buttonActive {
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+}
+
+#analyticsButtonContainer {
+  max-height: 600px;
+  overflow-x: hidden;
+  margin:auto;
+  width:100%;
+}
+
+.add-expert-select-title-label, .add-expert-title {
+  display:none;
+  position: absolute;
+  top:10px;
+}
+
+.expert-notification-container {
+  height: 100%;
+  background: #FFFFFF;
+  cursor: pointer;
+  margin-bottom: 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px inset #DFDFDF;
+}
+
+.alert-notification-container {
+  height: 100%;
+  background: #FFFFFF;
+  cursor: pointer;
+  margin-bottom: 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px inset #DFDFDF;
+}
+
+.user-question, .last-response, .notification-date {
+  padding-left: 18px;
+}
+
+.user-question {
+  padding-top: 10px;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.last-response {
+  font-size: 13px;
+  padding-top: 2px;
+}
+
+.notification-date {
+  font-size: 10px;
+  padding-top: 10px;
+}
+
+.expert-icon {
+  float: right;
+  margin: 10px;
+  position: relative;
+}
+
+.read-green-indicator {
+  width: 6px;
+  height: 100%;
+  background: transparent;
+  float:left;
+  position: absolute;
+  border-radius: 4px 0 0 4px;
+}
+
+.unread-green-indicator {
+  width: 6px;
+  height: 100%;
+  background: $alert-green;
+  float:left;
+  position: absolute;
+  border-radius: 4px 0 0 4px;
+}
+
+.notification-title {
+  padding: 0px 0px 0px 20px;
+}
+
+.disabled-greyed-out-button {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.tableChartContainer .jqplot-point-label {
+  color: #FFFFFF;
+  font-size: 11px;
+  padding-right: 10px;
+}
+
+.tableChartContainer .jqplot-data-label {
+  color: #FFFFFF;
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.table-chart-title {
+  background: #f9f9f9;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+  padding-left: 13px;
+  border-radius: 6px 6px 0px 0px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+td.jqplot-table-legend.jqplot-table-legend-label {
+  padding: 20px 0 10px 4px;
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+}
+
+td.jqplot-table-legend.jqplot-table-legend-swatch {
+  padding-bottom: 8px;
+}
+
+
+/* for resizing text area */
+
+@mixin resizing-common () {
+  width: 400px;
+  min-height: 50px;
+  overflow: hidden;
+}
+
+.dialogue-bubble-user-text-area {
+  @include resizing-common ();
+  resize: none; /* remove this if you want the user to be able to resize it in modern browsers */
+  overflow: hidden;
+}
+
+.hidden-div-for-resizing {
+  display:none;
+  @include resizing-common ();
+  background-color: blue;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word; /* future version of deprecated 'word-wrap' */
+  font-size: 16px;
+}
+
+.child-switch{
+  padding: 0 0 0 20px;
+}
+
+.all-filters-panel-open {
+  background: #4ea8de;
+  color:white;
+}
+
+.all-filters-panel-closed {
+  background: white;
+}
+
+.benefit-notifications-settings-drawer{
+  background-color:#00182d;
+  padding: 0px 15px 0px 15px;
+}
+
+#member-id-form-panel {
+  display:none;
+}
+
+.member-id-panel-status-message-warning {
+  color:red;
+
+}
+
+.member-id-panel-status-message-working {
+  color:darkseagreen;
+}
+
+.collapse-button-notification-settings-container {
+  float:right;
+  padding-right: 0px;
+  position: relative;
+  top:0px;
+  background: transparent;
+  border:none;
+  outline:none;
+}
+
+.td-multiple-row-pipe {
+  color: $highlight-data-blue;
+  font-size: 30px;
+  font-weight: 200;
+  text-align: center;
+  width: 20px;
+}
+
+.collapse-button-notification-settings-overlay{
+  float: left;
+  position: relative;
+  top: 44px;
+  left: 17px;
+  width: 31px;
+  height: 32px;
+  z-index: 2;
+  opacity: 0.0;
+  background: pink;
+  border: none;
+}
+
+.collapse-button-notification-settings {
+  float:right;
+  padding-right: 0px;
+  position: relative;
+  top:0px;
+  background: transparent;
+  border:none;
+  outline:none;
+}
+
+.switch-container {
+  float:left;
+}
+
+.invalid-input{
+  border: 1px solid;
+  border-color: red;
+}
+select::-ms-expand {
+  display: none;
+}
+
+#search-primary-input::-ms-clear {
+  display: none;
+}
+
+#bubble-chart-annotation{
+  // z-index:99;
+  // font-family: "Roboto", sans-serif;
+  font-size:12px;
+  position: relative;
+  top: 10px;
+  left: 600px;
+  color: black;
+  border: 1px solid #dcdcdc;
+  width: 157px;
+}
+
+.tile-row-first-part,
+.tile-row-leading-part {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.tile-row-second-part {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color:#9fc2d3;
+  padding-left: 4px;
+}
+
+.tile-row-third-part,
+.tile-row-trailing-part {
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 24px;
+  color: white;
+  padding-left: 4px;
+}
+
+//.tile-row-leading-part {
+//  font-size: 18px;
+//  font-weight: 400;
+//  line-height: 24px;
+//  color:white
+//}
+
+//.tile-row-trailing-part {
+//  font-size: 12px;
+//  font-weight: 300;
+//  line-height: 24px;
+//  color:white
+//}
+
+//.tile-tier-select {
+//  // needs styling
+//  background-color: black;
+//  color:white;
+//}
+
+//.tile-tier-drop-down-container {
+//  padding: 20px;
+//  background-color:$benefit-tile-background;
+//  border-bottom: 2px $darkest-blue solid;
+//}
+
+.tile-row-as-of{
+  color: #9fc2d3;
+  font-style: italic;
+  font-size: 10px;
+  font-weight: 100;
+  position: relative;
+  left: 6px;
+  text-align: right;
+  top: 4px;
+}
+
+#periodLabel {
+  padding-right:10px;
+}
+#periodDropDownSelect {
+  width:200px;
+}
+//.benefits-drawer-tiered {
+//  background: pink;
+//  position: relative;
+//  padding: 0px 24px 0px 24px;
+//  width: 500px;
+//  left: -20px;
+//}
+
+//#account-settings-panel {
+//  display:none;
+//  background-color: white;
+//  //background-color: #d3d3d3;
+//}
+//
+//#account-settings-user-name-actions {
+//  display:none;
+//}
+//
+//.ui-dialog-titlebar-close {
+//  visibility: hidden;
+//}
+//.ui-dialog-titlebar {
+//  display: none;
+//}
+//
+//#logout:hover {
+//  color: #f26d7d;
+//}
+//
+//#logout:active {
+//  color: blue;
+//}
+//
+//#logout.selected {
+//  background-color: green;
+//}
+//
+//#account-settings-panel
+//{
+//  text-align: left;
+//}
+//#account-settings-user-name,
+//#account-settings-password
+//{
+//  width:250px;
+//}
+//
+//#account-settings-user-name:focus,
+//#account-settings-password:focus
+//{
+//  color: blue;
+//}
+//
+//#account-settings-panel-title-section{
+//  background-color:white;
+//  /* offset-x | offset-y | blur-radius | spread-radius | color */
+//  box-shadow: 0px -9px 31px -1px black;
+//}
+//
+//#account-settings-panel-body{
+//  background-color:white;
+//}
+//
+//#account-settings-panel.ui-dialog-content.ui-widget-content {
+//  padding:0;
+//}
+
+/* end for resizing text area */
+
+/*       dcm working on JIRA 3026, here*/
+//.expert-conversation-button-selected {
+//  background: $button-preselect-blue;
+//  pointer-events: none;
+//}
+//
+//.expert-conversation-button-disabled {
+//  background: #FFFFFF;
+//  border-radius: 24px;
+//  color: $button-preselect-blue;
+//  cursor: pointer;
+//  float: right;
+//  font-weight: 300;
+//  margin: 2px;
+//  padding: 8px 18px;
+//  margin-bottom: 8px;
+//  pointer-events: none;
+//}
+
+
+
+/* End Analytics Buttons */
+
+
+/* End Charts */
+
+
+//.search-query-response-icon {
+//  width:15px;
+//  height:15px;
+//  float:left;
+//}
+
+//.bookmark {
+//  width: 30px;
+//  height:30px;
+//  float:right;
+//  display:none;
+//}
+//
+//.history-header-all-filters, .history-header-bookmarked, .history-header-all,
+//.experts-header-create-expert,
+//.experts-header-category,
+//.experts-header-alphabetical
+//{
+//  width:100px;
+//  text-align: center;
+//}
+//
+//.experts-classification {
+//  font-weight: bold;
+//  background: gainsboro;
+//}
+//
+//.collapse-button {
+//  float:right;
+//  padding: 0px;
+//  border: none;
+//}
+//
+//.collapse-button-image {
+//  width:20px;
+//  height:20px;
+//}
+//
+//.collapse-button-open {
+//  float:right;
+//  padding: 0px;
+//}
+
+//@mixin expert-icon() {
+//  width: 15px;
+//  height: 15px;
+//}
+//
+//.benefit-details-expert-panel-email-icon{
+//  @include expert-icon();
+//}
+//.benefit-details-expert-panel-phone-icon{
+//  @include expert-icon();
+//}
+//.benefit-details-expert-panel-link-icon{
+//  @include expert-icon();
+//}
+//.search-query-response-link-icon {
+//  @include expert-icon();
+//}
+
+//.search-query-response-link{
+//  display:block;
+//}
+//
+//.expert-edit-button {
+//  width:75px;
+//}
+//
+//.all-filters-panel {
+//  background:#dcdcdc;
+//}
+//
+//#all-filters-panel-left{
+//  background:#dcdcdc;
+//  float:left;
+//}
+//#all-filters-panel-right{
+//  background:#dcdcdc;
+//  float:right;
+//  width:200px
+//}
+
+//.search-num-results{
+//  font-weight: bold;
+//
+//}
+//.search-num-label {
+//  margin-left:5%;
+//}
+
+//#periodDropDownSelect{
+//  padding-top:50px;
+//}
+//
+//#tableChartContainer {
+//  padding-top: 20px;
+//}
+//
+//.add-expert-type {
+//  font-size: 55px;
+//}
+
+///* place left nav buttons */
+//div.dynamic-nav-component,
+//div.home-nav,
+//div.history-nav,
+//div.experts-nav,
+//div.legal-nav {
+//  @include left-nav-buttons(buttons)
+//}

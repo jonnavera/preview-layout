@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <!--
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+-->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" async></script>
+    <script type="text/javascript" src="js/lib/jquery/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="js/lib/jqueryUI/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/lib/jQueryDateFormat/jquery-dateFormat.min.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="js/lib/bootstrap/bootstrap.min.css">
+
+    <script src="js/lib/handsontable/handsontable.full.min.js"> </script>
+    <script src="js/lib/jqueryMobileBrowser/jQueryMobileBrowser.js"> </script>
+    <link rel="stylesheet" href="js/lib/handsontable/handsontable.full.min.css">
+    <link rel="stylesheet" href="js/lib/jqueryUI/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/lib/jqueryUI/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/lib/jqueryUI/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="js/lib/jqueryMaskedInput/jquery.maskedinput.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="js/lib/jquery/jquery.qtip.custom/jquery.qtip.css"/>
+    <script type="text/javascript" src="js/lib/jquery/jquery.qtip.custom/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery/jquery.qtip.custom/imagesloaded.pkg.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery/jQuery.XDomainRequest.min.js"></script>
+    <script type="text/javascript" src="js/lib/naveraModules/dynamicComboBox.js"></script>
+    <script type="text/javascript" src="js/configuration/Config.js"></script>
+    <script type="text/javascript" src="js/helpers/Utilities.js"></script>
+
+    <script type="text/javascript" src="js/controllers/EntryPanelController.js"></script>
+    <script type="text/javascript" src="js/controllers/NavController.js"></script>
+    <script type="text/javascript" src="js/controllers/SearchController.js"></script>
+    <script type="text/javascript" src="js/controllers/AccountController.js"></script>
+
+    <script type="text/javascript" src="js/controllers/ResultsController.js"></script>
+    <script type="text/javascript" src="js/controllers/AnalyticsController.js"></script>
+    <script type="text/javascript" src="js/controllers/HistoryController.js"></script>
+    <script type="text/javascript" src="js/controllers/BenefitsController.js"></script>
+    <script type="text/javascript" src="js/controllers/ExpertsController.js"></script>
+    <script type="text/javascript" src="js/controllers/LinkController.js"></script>
+    <script type="text/javascript" src="js/controllers/AllFiltersController.js"></script>
+    <script type="text/javascript" src="js/controllers/BackButtonController.js"></script>
+    <script type="text/javascript" src="js/controllers/AskExpertAQuestionController.js"></script>
+    <script type="text/javascript" src="js/controllers/CreateExpertController.js"></script>
+    <script type="text/javascript" src="js/controllers/NotificationsController.js"></script>
+    <script type="text/javascript" src="js/controllers/HomeController.js"></script>
+    <script type="text/javascript" src="js/controllers/HTTPRequestsController.js"></script>
+    <script type="text/javascript" src="js/controllers/RadioGroupController.js"></script>
+
+
+    <script type="text/javascript" src="js/components/Tile/Tiered/TileTieredRow.js"></script>
+    <script type="text/javascript" src="js/components/Tile/TileRow.js"></script>
+    <script type="text/javascript" src="js/components/Tile/Tiered/TileTierDropDown.js"></script>
+    <script type="text/javascript" src="js/components/Tile/Tiered/TileTieredRowContainer.js"></script>
+
+
+    <script type="text/javascript" src="js/models/Analytics/AnalyticsModel.js"></script>
+    <script type="text/javascript" src="js/models/ApplicationState.js"></script>
+    <script type="text/javascript" src="js/data/TemporaryHardcodedData.js"></script>
+    <script type="text/javascript" src="js/lib/history.js/scripts/bundled/html5/jquery.history.js"></script>
+    <script type="text/javascript" src="js/controllers/ViewManager.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="css/header.css"/>
+    <link class="include" rel="stylesheet" type="text/css" href="js/lib/jqPlot/jquery.jqplot.min.css" />
+    <script type="text/javascript" src="js/lib/d3/d3.min.js"></script>
+    <script type="text/javascript" src="js/lib/d3Cloud/d3.layout.cloud.js"></script>
+
+
+    <!-- Google analytics tracking -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-76315906-1', 'auto');
+
+        var clientId;
+        ga(function(tracker) {
+                     clientId = tracker.get('clientId');
+                });
+        ga('set', {'dimension2': clientId});
+
+        ga('set', {'dimension1': new Date().getTime()});
+
+        ga('send', 'pageview');
+
+    </script>
+    <!-- End Google analytics tracking -->
+
+
+</head>
+
+<body onload="ViewManager.initPart1()">
+
+<div id="entry" style="display:none" class="basePanel">
+
+    <div class="loginArea">
+        <div id="version" style="bottom:0; position: absolute"></div>
+        <div class="center">
+
+            <div id="app-download-links-mobile">
+                <p id="download-text">Download the app for a better experience!</p>
+                <div class="android-download-link-mobile"><a href="https://play.google.com/store/apps/details?id=com.navera.naveraapp&hl=en" target="_top"><img src="images/android_badge.png" alt=""></a></div>
+                <div class="apple-download-link-mobile"><a href="https://itunes.apple.com/us/app/navera-real-time-communication/id1095432845?mt=8" target="_top"><img src="images/apple_badge.png" alt=""></a></div>
+            </div>
+
+            <div id="mobile-image-large"><img src="images/mobile-devices.png" alt=""></div>
+
+            <div class="right-panel">
+                <div class="navera-logo"><img src="images/navera_logo.png" alt=""></div>
+
+                <div id="invitationPanel" class="entryPanel">
+                    <div class="loginLabel">Invitation Code</div>
+                    <div onkeyup="EntryPanelController.loginSubmitHandler(event)" ><input id="invitationCodeText" class=""></div>
+                    <div><input id="invitationCodeSubmitButton" type="button" value="submit code" onclick="EntryPanelController.invitationSubmitCodeHandler()"></div>
+                    <div><input id="invitationCodeGoToLoginButton" type="button" value="go to login" onclick="EntryPanelController.goToLoginHandler()"></div>
+                </div>
+
+                <div id="verificationPanel" class="entryPanel" onkeyup="EntryPanelController.loginSubmitHandler(event)">
+                    <div><input type="button" value="verify identity" id="verifyInput" onclick="EntryPanelController.verifyIdentitySubmitButtonHandler()"></div>
+                </div>
+
+                <div id="createAccountPanel" class="entryPanel" onkeyup="EntryPanelController.loginSubmitHandler(event)">
+                    <div>Email</div>
+                    <div><input id="createAccountEmailText"></div>
+                    <div>Password</div>
+                    <div><input type="password" id="createAccountPasswordText" value="davedave"></div>
+                    <div><input id="createAccountSubmit" type="button" value="create account" onclick="EntryPanelController.createAccountButtonHandler()"></div>
+                </div>
+
+                <div id="activationLinkSentPanel" class="entryPanel">
+                    <div id="yourAccountText">Your account has not been activated. Please use the account activation
+                        link sent to:
+                    </div>
+                    <div id="activationLinkSentPanelEmailReadOnly"></div>
+                    <div><input id="goToLoginButton" type="button" value="go to login"
+                                onclick="EntryPanelController.goToLoginHandler()"></div>
+                    <div><input id="resendActivationLink" type="button" value="re-send activation link"
+                                onclick="EntryPanelController.resendActivationLinkHandler()"></div>
+                    <div><input id="changeEmailAddress" type="button" value="change e-mail address"
+                                onclick="EntryPanelController.gotoCreateAccountButtonHandler()"></div>
+                </div>
+
+                <div id="forgotPasswordPanel" class="entryPanel">
+                    <div id="passwordLabel">Enter Valid Email</div>
+                    <div><input id="resetPasswordEmailText"></div>
+                    <div><input id="resetPasswordButton" type="button" value="reset password" onclick="EntryPanelController.resetPasswordButtonHandler()"></div>
+                    <div><input id="invitationCodeGoToLoginButton" type="button" value="go to login" onclick="EntryPanelController.goToLoginHandler()"></div>
+                </div>
+
+                <div id="loginPanel" class="entryPanel">
+                    <div id="emailLabel">Email</div>
+                    <div onkeyup="EntryPanelController.loginSubmitHandler(event)">
+                        <div><input id="loginEmailText"></div>
+                        <div id="passwordLabel">Password</div>
+                        <div><input type="password" id="loginPasswordText"></div>
+                    </div>
+                    <div><input id="loginButton" type="button" value="login" onclick="EntryPanelController.loginButtonHandler()"></div>
+                    <div onclick="EntryPanelController.forgotPasswordButtonHandler()" class="entryPanelNavLink">forgot password</div>
+                    <div><input id="login-return-to-invitation-code" type="button" value="create account" onclick="EntryPanelController.goToInvitationViewHandler()"></div>
+                </div>
+
+                <div id="newPasswordPanel" class="entryPanel">
+                    <div>new password</div>sdf
+                    <div><input id="new-password"></div>
+                    <div><input id="new-password-button" type="button" value="Set Password" onclick="EntryPanelController.createNewPasswordButtonHandler()"></div>
+                </div>
+
+                <div id="invitationPanelErrorMessage"></div>
+
+                <div id="app-download-links-full-screen">
+                    <div class="android-download-link-full-screen"><a href="https://play.google.com/store/apps/details?id=com.navera.naveraapp&hl=en" target="_top"><img src="images/android_badge.png" alt=""></a></div>
+                    <div class="apple-download-link-full-screen"><a href="https://itunes.apple.com/us/app/navera-real-time-communication/id1095432845?mt=8" target="_top"><img src="images/apple_badge.png" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="primary"></div>
+    <div id="searchBackground"></div>
+
+    <div id="activityContainer">
+    <div id="activity" style ="display:none" class="basePanel">
+
+        <div id="account" >
+            <div id="header"><div id="company-name">Company Name</div>
+                <div id="about-button" onclick="AboutController.aboutButtonClickHandler(event)" >About</div>
+
+                <div class="admin-view-element floatRight" id='chartsDropdownContainer'></div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <div id="exit" style ="display:none" class="basePanel">Hello, rhino_webapp. Exit.</div>
+
+<!--
+    Libraries
+-->
+<div id="libraries">
+    <div  data-verification-code="social_full" class="verificationSubForm">
+        <div class="loginLabel">Social Security Number</div>
+        <!-- for testing -->
+       <!-- <div><input id="ssnInput"  placeholder="123-45-6789" value="555555555"></div>-->
+        <div><input id="ssnInput"  ></div>
+    </div>
+
+    <div  data-verification-code="birth_date" class="verificationSubForm">
+        <div class="loginLabel">Date of Birth</div>
+        <!-- for testing
+        <div><input id="dataOfBirthInput" placeholder="06-09-1981" value="19500101" ></div>
+         -->
+        <div><input id="dataOfBirthInput" ></div>
+    </div>
+
+    <!-- These are the main panels of the application proper. They do not get cloned, they get appended to another node in the DOM.
+       This is destructive, they are no longer in libraries -->
+    <div id="account-panel-button">
+        <div id="user-name" >Name</div>
+        <div id="admin-button" class="smallTabButton" onclick="AccountController.adminButtonHandler(event)">Administrator</div>
+        <div id="employee-button" class="smallTabButton" onclick="AccountController.employeeButtonHandler(event)">Administrator</div>
+
+
+        <div  title="" id="account-settings-panel" >
+            <div id="account-settings-panel-title-section">
+                <div id="account-settings-title-user-name" >jsmith@megacorp.com</div>
+                <div id="account-settings-title-title" >HR Manager</div>
+                <div id="logout" >logout</div>
+            </div>
+
+            <div id="account-settings-panel-body">
+                <div id="account-settings-user-name-container">
+                    <div class="label-text">Email</div><div><input id="account-settings-user-name"></div>
+                    <div id="account-settings-user-name-actions">
+                        <div id="account-settings-user-name-cancel">cancel</div>
+                        <div id="account-settings-user-name-save">save</div>
+                    </div>
+                </div>
+                <div id="account-settings-password-container">
+                    <div class="label-text">Password</div><div><input id="account-settings-password" type="password"></div>
+                    <div id="account-settings-update-password-actions">
+                        <div id="account-settings-update-password-cancel">cancel</div>
+                        <div id="account-settings-update-password-save">save</div>
+                    </div>
+                </div>
+                <div id="account-settings-message" ></div>
+                <p></p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div id="search-panel">
+        <div id="search-primary-container" class="employee-view-element">
+            <div id="search-button-container">
+                <div onclick="SearchController.searchButtonHandler(event)"tabindex=0 id="search-button-primary">
+                    <img src="images/searchmag_big.png" alt="">
+                </div>
+            </div>
+            <div id="youCanFind">you can find</div>
+            <input id="search-primary-input" value="">
+
+        </div>
+
+    </div>
+
+    <div id="search-panel-inline">
+        <div id="aa">
+            <input id="search-inline-input">
+        <div id="search-inline-button"></div>
+        </div>
+    </div>
+
+    <div id="center">
+        <div id="nav-panel">
+            <div id="administrator-nav" class="nav-section">
+            </div>
+            <div id="employee-nav" class="nav-section">
+                <div class="nav-panel-insurance-header">Benefits</div>
+                <div class="nav-panel-services-header">Services</div>
+                <div class="nav-panel-pages-header">Pages</div>
+            </div>
+
+        </div>
+        <div id="results-panel" class="results-panel-employee-view"></div>
+
+
+
+        <!--   JE adding styling before DM makes it work!   -->
+        <div id="notification-panel" class="employee-view-element">
+<!--
+            <div class="expert-notification-container">
+                <div class="unread-green-indicator"></div>
+                <div class="user-question">What’s the policy on company medical reimbursement and ...</div>
+                <div class="last-response">We follow the California state allowed 6 weeks for maternity leave. In some cases you can extend your leave by using ...</div>
+                <div class="notification-date"></div>
+                <img class="expert-icon" src="images/link_icon.png" alt="alert">
+            </div>
+
+            <div class="alert-notification-container">
+                <div class="unread-green-indicator"></div>
+                <div class="insurance-type"></div>
+                <div class="alert-message"></div>
+                <div class="notification-date"></div>
+                <img class="alert-icon" src="images/link_icon.png" alt="alert">
+            </div>
+-->
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- Start Search -->
+    <!-- These elements gets cloned, and then the id of the cloned element gets removed.
+        Styling should be done through the class.-->
+
+    <div id="search-header" class="search-header" ><div class="search-header-title floatLeft"><span class="search-num-results"></span><span class="search-num-label">Results</span></div>
+        <div class="history-header-all-filters all-filters-panel-closed floatRight" onclick="AllFiltersController.allFiltersPanelDrawerButtonHandler(event)"
+             data-toggle="collapse" data-target=".all-filters-panel"><input  type="checkbox" id="close"><label for="">all filters<span></span></label></div>
+    </div>
+
+    <div id="system-speech-stem"></div>
+    <div id="search-query-response" class="search-query-response" data-question-id=""  onclick="SearchController.responseSelectedHandler(this)"><img class="search-query-response-icon">
+        <div class="search-query-response-title"></div><div class="search-query-response-category"></div><img src="images/inline_bookmark.svg"  class="bookmark"></div>
+
+    <div id="related-response" class="related-response" data-question-id=""  onclick="SearchController.responseSelectedHandler(this)"><img class="related-response-icon">
+        <div class="related-response-title"></div><div class="related-response-category"></div><img src="images/inline_bookmark.svg"  class="bookmark"></div>
+
+    <a target="_blank" href="" data-id="" id="search-query-response-link" class="search-query-response-link" onclick="LinkController.linkClickedHandler(event)">
+        <img class="search-query-response-link-icon" src="images/link_icon.png"><span></span></a>
+
+    <div id="selected-response-text" class="selected-response-text" data-question-id=""><div class="question">
+        <div class="question-text"></div>
+        <div onclick="SearchController.bookmarkToggleHandler(event)" class="selected-response-bookmark"></div>
+    </div>
+        <div class="selected-response-teaser"></div>
+        <div class="related-content-header">I found some related options</div>
+    </div>
+
+   <div id="selected-response-video" class="selected-response-video" data-question-id="">
+       <div class="question-video">
+           <div class="question-text"></div>
+           <div onclick="SearchController.bookmarkToggleHandler(event)" class="selected-response-bookmark"></div>
+       </div>
+       <video width="498" height="280" class="video" controls></video>
+        <div class="related-content-header">I found some related options</div>
+   </div>
+    <!--End Search -->
+
+
+    <!-- These elements gets cloned, and then the id of the cloned element gets removed.
+        Styling should be done through the class.-->
+    <!--home and payroll buttons -->
+    <div id="home-nav" class="home-nav">Home</div>
+    <div id="payroll-nav" class="payroll-nav" >Payroll</div>
+    <!--dynamic nav buttons -->
+    <div id="dynamic-nav-component" class="nav-item-unselected nav-component dynamic-nav-component" data-category="" ></div>
+    <!--hist, experts, legal buttons -->
+    <div id="history-nav" class="nav-item-unselected nav-component history-nav">History</div>
+    <div id="experts-nav" class="nav-item-unselected nav-component experts-nav" >Experts</div>
+    <div id="legal-nav" class="nav-item-unselected nav-component legal-nav" >Legal</div>
+    <!-- -->
+    <!-- Experts Listings-->
+    <div id="expert-query-response-item" class="expert-query-response-item" >
+        <button data-toggle="collapse" data-target="" class="collapse-button-expert-details" onclick="ExpertsController.collapseButtonHandler(event)">
+            <img src="images/expert_tri_right.png" class="collapse-button-image collapsed">
+            <div class="expert-query-response-item-title collapsed"></div>
+            <div class="expert-query-response-item-subtitle"></div>
+        </button>
+        <div class="expert-query-response-item-more-info" onclick="ExpertsController.needMoreInfoHandler(event)"><img src="images/qa.png" width="42" height="42"></div>
+        <div class="clear"></div>
+        <div class="collapse" id="">
+            <div class="expert-drawer">
+                <div class="expert-edit-button floatRight" onclick="ExpertsController.editButtonHandler(event)">Edit</div>
+
+                <div class="expert-query-response-item-institution-name"></div>
+                <div class="expert-query-response-item-email"></div>
+                <div class="expert-query-response-item-phone-primary"></div>
+                <div class="expert-query-response-item-phone-secondary"></div>
+                <div class="expert-query-response-item-street-address-1"></div>
+                <div class="expert-query-response-item-street-address-2"></div>
+                <div class="expert-query-response-item-city"></div>
+                <div class="expert-query-response-item-state"></div>
+                <div class="expert-query-response-item-zip"></div>
+                <div class="expert-query-response-item-link"><a target="_blank"></a></div>
+            </div>
+        </div>
+    </div>
+    <!-- -->
+
+    <!--Start Trending Header-->
+    <div id="trending-header" class="history-header" ><div class="history-header-title floatLeft">Trending</div>
+
+    </div>
+
+    <!--End History Header-->
+
+    <!--Start History Header-->
+    <div id="history-header" class="history-header" ><div class="history-header-title floatLeft">History</div>
+        <div class="history-header-all-filters all-filters-panel-closed" onclick="AllFiltersController.allFiltersPanelDrawerButtonHandler(event)"
+             data-toggle="collapse" data-target=".all-filters-panel"><input type="checkbox" id="close">
+            <label for="">all filters<span></span></label></div>
+        <div class="history-header-all-bookmarked-button-container" onclick="RadioGroupController.radioHandler(event)">
+            <div class="history-header-bookmarked  floatRight bookmark-filter-toggle-false" >bookmarked</div>
+            <div class="history-header-all floatRight bookmark-filter-toggle-true" >all</div>
+        </div>
+    </div>
+
+    <!--End History Header-->
+    <div id="history-indent"><div id="history-date-header" class="history-date-header"></div></div>
+
+    <!--Start  All Filters Panel-->
+    <div class="collapse all-filters-panel" id="all-filters-panel"
+         ><div id="all-filters-panel-left"></div><div id="all-filters-panel-right"></div>
+    </div>
+    <div id="all-filters-checkbox" class="all-filters-checkbox" >
+        <input onclick="AllFiltersController.allFiltersCheckboxHandler(event)"type="checkbox" id="check-label"><label for="check-label"><span></span></label>
+    </div>
+    <!--End  All Filters -->
+
+    <div id="experts-header" class="exports-header" ><div class="exports-header-title floatLeft">Experts</div>
+        <div class="experts-header-create-expert floatRight" onclick="ExpertsController.createExpertHandler(event)"><input type="checkbox" id="add"><label for="add">create<span></span></label></div>
+       <div onclick="RadioGroupController.radioHandler(event)">
+            <div class="experts-header-alphabetical bookmark-filter-toggle-false floatRight">alphabetical</div>
+           <div class="experts-header-category bookmark-filter-toggle-true floatRight" >category</div>
+       </div>
+    </div>
+
+    <div id="add-expert-form">
+        <div class="add-expert-header"><div class="add-exports-header-title floatLeft">Add Expert</div>
+            <div class="add-experts-header-cancel floatRight" onclick="ExpertsController.cancelNewContactHandler(event)"><input type="checkbox" id="cancel"><label for="cancel">cancel<span></span></label></div>
+        </div>
+    <div class="clear"></div>
+
+        <div class="floatLeft">
+            <div class="add-expert-section-title" onclick="">Select Individual or Company</div>
+            <select class="add-expert-individ-company" onchange="CreateExpertController.onIndividualCompanyDropdownChange(event)">
+                <option value="company">Company</option>
+                <option value="individual">Individual</option>
+            </select>
+        </div >
+        <div class="floatRight">
+            <div class="add-expert-section-category" onclick="">Category</div>
+            <div>
+                <select class="add-expert-category">
+
+                </select>
+            </div>
+        </div>
+        <div class="floatRight" id="select-title">
+            <div class="add-expert-section-title add-expert-select-title-label" onclick="">Select Title</div>
+            <div>
+                <select class="add-expert-title" onchange="DynamicComboBox.selectHandler(event)">
+                </select>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="add-expert-contact-info"></div>
+
+        <div class="save-expert floatRight" onclick="ExpertsController.saveExpertHandler(event)">save</div>
+
+    </div>
+
+
+    <div id="add-expert-individual-contact-info">
+        <div class="contact-area" onclick="">Contact Information</div>
+        <div class="floatLeft"><input class="add-expert-first-name" placeholder="First Name"></div>
+        <div class="floatRight"><input class="add-expert-last-name" placeholder="Last Name"></div>
+        <div class="clear"></div>
+        <div><input class="add-expert-institution" placeholder="Institution"></div>
+
+        <div><input class="add-expert-email" placeholder="email" onblur="CreateExpertController.validateEmailInput(event)"> </div>
+        <div class="floatLeft"><input class="add-expert-primary-phone" placeholder="Primary Phone"></div>
+        <div class="floatRight"><input class="add-expert-secondary-phone" placeholder="Secondary Phone"></div>
+        <div class="clear"></div>
+        <div class="floatLeft"><input class="add-expert-address-1" placeholder="Address"></div>
+       <!-- <div class="floatRight"><input class="add-expert-address-2" placeholder="Address 2"></div>
+        -->
+        <div class="clear"></div>
+        <div class="floatLeft"><input class="add-expert-city" placeholder="City"></div>
+        <div class="floatRight"><select class="add-expert-state">
+            <option value="state">State</option>
+
+        </select></div>
+        <div class="floatRight"><input class="add-expert-zip-code" placeholder="Zip Code"></div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="add-expert-company-contact-info">
+        <div class="" onclick="">Contact Information</div>
+        <div class="floatLeft"><input class="add-expert-institution" placeholder="Institution or Company"></div>
+        <div class="clear"></div>
+
+        <div class="floatLeft"><input class="add-expert-primary-phone" placeholder="Primary Phone"></div>
+        <div class="floatRight"><input class="add-expert-secondary-phone" placeholder="Secondary Phone"></div>
+        <div class="clear"></div>
+        <div><input class="add-expert-email" placeholder="email" onblur="CreateExpertController.validateEmailInput(event)"></div>
+        <div class="floatLeft"><input class="add-expert-address-1" placeholder="Address"></div>
+        <!-- <div class="floatRight"><input class="add-expert-address-2" placeholder="Address 2"></div>
+         -->
+        <div class="clear"></div>
+        <div class="floatLeft"><input class="add-expert-city" placeholder="City"></div>
+        <div class="floatRight"><input class="add-expert-zip-code" placeholder="Zip Code"></div>
+        <div class="floatRight"><select class="add-expert-state">
+
+        </select></div>
+        <div class="clear"></div>
+    </div>
+
+
+
+    <div id="benefit-details" class="benefit-details">
+        <div class="benefit-details-title">Medical (need a dynamic title)</div>
+        <div class="benefit-details-plan-name">
+        </div>
+        <div class="benefit-details-provider-name">
+        </div>
+
+        <div class="benefit-details-expert-panel">
+            <div class="benefit-details-expert-panel-title"></div>
+            <div class="benefit-details-expert-panel-details"></div>
+            <div class="benefit-details-expert-panel-email"><img class="benefit-details-expert-panel-email-icon" src="images/email_icon.png"><span></span></div>
+            <div class="benefit-details-expert-panel-phone-primary"><img class="benefit-details-expert-panel-phone-icon" src="images/phone_icon.png"><span></span></div>
+            <div class="benefit-details-expert-panel-phone-secondary"><img class="benefit-details-expert-panel-phone-icon" src="images/phone_icon.png"><span></span></div>
+            <a target="_blank" href="" data-id="" class="benefit-details-expert-panel-link" onclick="LinkController.linkClickedHandler(event)">
+                <img class="benefit-details-expert-panel-link-icon" src="/rhino_webapp/images/link_icon.png"><span></span></a>
+        </div>
+    </div>
+
+    <div id="benefit-panel-expert-panel-detail" class="benefit-panel-expert-panel-detail"></div>
+    <div id="benefit-details-tile" class="benefit-details-tile">
+        <!-- info icon-->
+        <button data-toggle="collapse" data-target="" class="collapse-button-benefit-details" onclick="BenefitsController.benefitsInfoCollapseButtonHandler(event)">
+            <img src="images/benefit_drawer_off.png" class="collapse-button-image collapsed info-icon"
+                    data-closed-image="images/benefit_drawer_off.png"
+                    data-open-image="images/benefit_drawer_on.png" >
+            <div class=""></div>
+        </button>
+        <!-- end info icon-->
+        <!-- bell icon-->
+        <div style="display:none" class="collapse-button-notification-settings-container">
+            <button data-toggle="collapse" data-target=""  class="collapse-button-notification-settings" onclick="BenefitsController.notificationSettingsCollapseButtonHandler(event)">
+                <img src="images/bell_closed_temp.png" class="collapse-button-image collapsed notification-settings-button-in-row"
+                     data-closed-image="images/bell_closed_temp.png"
+                     data-open-image="images/bell_open_temp.png" >
+
+                <div class=""></div>
+            </button>
+            <button class="collapse-button-notification-settings-overlay" style="" onclick="MemberVerificationController.notificationButtonOverlayHandler(event)"> </button>
+
+        </div>
+        <!-- end bell icon-->
+
+
+        <div class="benefit-details-tile-title"></div>
+        <div class="benefit-details-tile-content"></div>
+        <div class="collapse benefits-drawer">
+            <div class="benefit-drawer-padding"></div>
+            <div class="benefit-drawer-content"></div>
+            <div class="benefit-drawer-padding"></div>
+        </div>
+        <!-- dcm this is the notification settings drawer-->
+        <div id="benefit-notifications-settings-drawer" class="collapse benefit-notifications-settings-drawer">
+            <div class="benefit-drawer-padding"></div>
+            <div class="benefit-notifications-settings-drawer-content"></div>
+            <div class="benefit-drawer-padding"></div>
+        </div>
+        <!-- dcm to here-->
+
+    </div>
+
+<!--
+    <div id="tile-tiered-row-container"
+         class="tile-tiered-row-container">
+        <div class="tile-tiered-row-container-title"></div>
+    </div>
+    -->
+
+    <div id="tile-tier-drop-down-container"
+         class="tile-tier-drop-down-container">
+        <select class="tile-tier-select">
+
+        </select>
+    </div>
+
+    <div id="tile-tiered-row" class="tile-tiered-row"></div>
+
+
+    <div id="benefit-notifications-switch">
+
+    </div>
+
+
+
+
+    <div id="experts-classification" class="experts-classification">
+    </div>
+
+    <div id="experts-listing">
+        <div id="experts-listing-"></div>
+
+    </div>
+    <div id="back-button" class="back-button"  onclick="BackButtonController.backButtonClickHandler(event)">Back</div>
+
+    <div id="send-anonymous-container" class="send-anonymous-container">
+        <div class="dialogue-button send-question-button" onclick="AskExpertAQuestionController.sendQuestionHandler(event)">Send</div>
+        <div class="dialogue-button anonymous-question-toggle-false" onclick="AskExpertAQuestionController.anonymousToggleHandler(event)">Anonymous</div>
+        <div class="clear-both"></div>
+    </div>
+
+    <div id="expert-for-question" class="expert-for-question"><div class="expert-for-question-name"></div ><div class="expert-for-question-title"></div></div>
+    <div id="satisfied-question" class="dialogue-bubble-expert">Is this what you were looking for?</div>
+    <div id="someone-to-help" class="dialogue-bubble-expert">I found someone who can help.</div>
+    <div id="please-provide-a-message" class="dialogue-bubble-expert please-provide-a-message">Please provide a question.</div>
+    <div id="your-message-sent" class="dialogue-bubble-expert">Sent! Expect a response in your notifications panel!</div>
+    <div id="thanks-will-relay-kudos" class="dialogue-bubble-expert">Thanks!  We will pass along your kudos!</div>
+    <div id="dialog-button-yes-helpful" class="dialogue-button" >yes, it was</div>
+    <div id="dialog-button-no-need-more" class="dialogue-button" >no, i need more information</div>
+    <div id="dialog-button-take-me-back-search" class="dialogue-button" >no, take me back</div>
+    <div id="dialog-button-i-have-no-more-questions" class="dialogue-button" >Thank you, I have no more questions.</div>
+    <div id="dialog-button-i-have-more-questions" class="dialogue-button" >I have another question.</div>
+    <div id="dialogue-bubble-expert" class="dialogue-bubble-expert"><textarea name="textarea" rows="2" cols="50" ></textarea></div>
+
+   <!--
+    <div id="dialogue-bubble-user" class="dialogue-bubble-user"><textarea name="textarea" rows="2" cols="50" placeholder="Ask question here"></textarea></div>
+   -->
+
+    <div id="dialogue-bubble-user" class="dialogue-bubble-user"><textarea onkeyup="AskExpertAQuestionController.userDialogBubbleKeyUpHandler(event)" class="dialogue-bubble-user-text-area" name="textarea" rows="2" cols="50" ></textarea></div>
+
+
+
+
+
+<!--
+    <div id="notification-item" data-message-thread-id onclick="NotificationsController.notificationClickHandler(event)"
+         class="notification-item">
+        <div class="notification-opened-indicator notification-opened-false"></div>
+        <div class="notification-title"></div>
+        <div class="notification-text"></div>
+        <div class="clear"></div>
+    </div>
+-->
+
+    <div id="expert-notification-container" data-message-thread-id class="expert-notification-container" onclick="NotificationsController.notificationClickHandler(event)">
+        <div class="notification-opened-indicator unread-green-indicator"></div>
+        <img class="expert-icon" src="images/expert_thread.png" alt="alert">
+        <div class="user-question"></div>
+        <div class="last-response"></div>
+        <div class="notification-date"></div>
+    </div>
+
+    <div id="alert-notification-container" class="alert-notification-container" onclick="NotificationsController.notificationClickHandler(event)">
+        <div class="notification-opened-indicator unread-green-indicator"></div>
+        <img class="alert-icon" src="images/link_icon.png" alt="alert">
+        <div class="insurance-type"></div>
+        <div class="alert-message"></div>
+        <div class="notification-date"></div>
+    </div>
+
+    <div id="tableChartContainer" class="tableChartContainer"></div>
+    <div id="table-chart-title" class="table-chart-title"></div>
+
+
+    <div id="switch" ><label ></label><input class="floatRight" type="checkbox"></div>
+
+    <div id="about-panel">
+        <div style="padding-top: 40px" >Navera Web Application</div>
+        <div id="about-panel-version">Version</div>
+    </div>
+
+
+
+    <div id="member-id-form-panel">Member ID
+        <div></div>
+        <input id="member-id-form-input" placeholder="member ID">
+        <div id="member-id-panel-status-message"> </div>
+    </div>
+
+</div>
+<!--
+End Libraries
+-->
+    <script type="text/javascript" src="js/controllers/MemberVerificationController.js"></script>
+    <script type="text/javascript" src="js/data/StubbedData.js"></script>
+    <script type="text/javascript" src="js/controllers/AboutController.js"></script>
+    <!-- include jqplot, load at end, keep things fast -->
+    <script class="include" type="text/javascript" src="js/lib/jqPlot/jquery.jqplot.min.js"></script>
+    <!-- Additional jqplot plugins go here -->
+    <script class="include" language="javascript" type="text/javascript" src="js/lib/jqPlot/plugins/jqplot.bubbleRenderer.min.js"></script>
+    <script class="include" language="javascript" type="text/javascript" src="js/lib/jqPlot/plugins/jqplot.pieRenderer.min.js"></script>
+    <script class="include" language="javascript" type="text/javascript" src="js/lib/jqPlot/plugins/jqplot.barRenderer.min.js"></script>
+    <script class="include" language="javascript" type="text/javascript" src="js/lib/jqPlot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+    <script class="include" language="javascript" type="text/javascript" src="js/lib/jqPlot/plugins/jqplot.pointLabels.min.js"></script>
+    <script class="include" language="javascript" type="text/javascript" src="js/lib/jqPlot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+    <script class="include" language="javascript" type="text/javascript" src="js/lib/jqPlot/plugins/jqplot.dateAxisRenderer.min.js"></script>
+    <script class="include" language="javascript" type="text/javascript" src="js/lib/jqPlot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
+    <!-- End additional plugins -->
+
+
+</body>
