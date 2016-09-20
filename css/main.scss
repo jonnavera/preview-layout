@@ -3,9 +3,14 @@
 
 /////////// All Scaling ///////////
 
-.phone-container {
+.iphone-container {
   zoom: 0.5;
   -moz-transform: scale(0.5);
+}
+
+.android-container {
+  zoom: 0.305;
+  -moz-transform: scale(0.305);
 }
 
 //////////////////////////////////////
@@ -13,20 +18,32 @@
 
 /////////// Screen Scaling ///////////
 
-#twox {
+#iphone-twox {
   zoom: 0.86;
-  -moz-transform: scale(1.3);
+  -moz-transform: scale(0.86);
+}
+
+#android-twox {
+  zoom: 1.41;
+  -moz-transform: scale(1.41);
 }
 
 //////////////////////////////////////
 
 //////////// Type Styles /////////////
 
-#twox {
+#iphone-twox {
   width: 640px;
   height: 1136px;
   position: absolute;
   margin: 244px 77px;
+}
+
+#android-twox {
+  width: 640px;
+  height: 1136px;
+  position: absolute;
+  margin: 162px 45px;
 }
 
 h1.headline {
@@ -245,8 +262,24 @@ img {
   right: 0;
 }
 
-.phone-container {
+.iphone-container {
   width: 680px;
   height: 1390px;
   position: relative;
+
+  display: -webkit-inline-box;
+  display: inline-table;
+  float: left;
+  margin: 40px 0 0 40px;
+}
+
+.android-container {
+  width: 1030px;
+  height: 2040px;
+  position: relative;
+
+  display: -webkit-inline-box;
+  display: inline-table;
+  float: left;
+  margin: 190px 0 0 40px;
 }
