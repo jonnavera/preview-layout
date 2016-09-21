@@ -373,7 +373,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #666666; }
+  color: #383838; }
 
 .iphone-container {
   zoom: 0.5;
@@ -397,11 +397,34 @@ body {
   position: absolute;
   margin: 244px 77px; }
 
+.iphone-container {
+  width: 680px;
+  height: 1390px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: inline-table;
+  float: left;
+  margin: 40px 0 0 40px; }
+
 #android-twox {
   width: 642px;
   height: 1136px;
   position: absolute;
   margin: 161px 44px; }
+
+.android-container {
+  width: 1030px;
+  height: 2040px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: inline-table;
+  float: left;
+  margin: 190px 0 0 40px; }
+
+br {
+  display: block;
+  margin: 24px 0;
+  content: " "; }
 
 h1.headline {
   color: #FFFFFF;
@@ -419,23 +442,18 @@ h2.title {
   margin: 0;
   width: 384px; }
 
-.story p {
-  font-size: 24px; }
-
-span.bold {
-  font-weight: 700; }
-
-br {
-  display: block;
-  margin: 24px 0;
-  content: " "; }
-
 .headline-area {
   display: block; }
 
 .headline-area img {
   display: block;
   height: 40px; }
+
+.story p {
+  font-size: 24px; }
+
+span.bold {
+  font-weight: 700; }
 
 .twox-nav-bar {
   background-color: #00182D;
@@ -454,6 +472,30 @@ h1.client-name {
   font-weight: 100;
   text-align: center;
   height: 100%; }
+
+.twox-tab-bar {
+  background-color: #00182D;
+  bottom: 0;
+  height: 98px;
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+  z-index: 10; }
+
+.background-image-twox {
+  height: 1136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 640px;
+  z-index: -1; }
+
+.background-image-twox img {
+  height: 1136px;
+  width: auto;
+  filter: saturate(200%) blur(40px);
+  -webkit-filter: saturate(200%) blur(40px);
+  /* Chrome, Safari, Opera */ }
 
 ::-webkit-scrollbar {
   width: 12px; }
@@ -522,15 +564,6 @@ a.inline-link {
   text-decoration: none;
   color: #2d9be0; }
 
-.twox-tab-bar {
-  background-color: #00182D;
-  bottom: 0;
-  height: 98px;
-  opacity: 0.9;
-  position: absolute;
-  width: 100%;
-  z-index: 10; }
-
 .story {
   line-height: 32px;
   margin: 0 40px 40px; }
@@ -571,42 +604,5 @@ img#switch {
   width: 80px;
   height: 40px;
   float: right; }
-
-.background-image-twox {
-  height: 1136px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 640px;
-  z-index: -1; }
-
-.background-image-twox img {
-  height: 1136px;
-  width: auto;
-  filter: saturate(200%) blur(40px);
-  -webkit-filter: saturate(200%) blur(40px);
-  /* Chrome, Safari, Opera */ }
-
-img {
-  top: 0;
-  right: 0; }
-
-.iphone-container {
-  width: 680px;
-  height: 1390px;
-  position: relative;
-  display: -webkit-inline-box;
-  display: inline-table;
-  float: left;
-  margin: 40px 0 0 40px; }
-
-.android-container {
-  width: 1030px;
-  height: 2040px;
-  position: relative;
-  display: -webkit-inline-box;
-  display: inline-table;
-  float: left;
-  margin: 190px 0 0 40px; }
 
 /*# sourceMappingURL=main.css.map */

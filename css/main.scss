@@ -1,7 +1,8 @@
 @import 'styles';
 
 
-/////////// All Scaling ///////////
+/////////// Phone frame AND artwork Scaling ///////////
+// Use these tags to scale each phone frame and the artwork at the same time //
 
 .iphone-container {
   zoom: 0.5;
@@ -13,10 +14,8 @@
   -moz-transform: scale(0.305);
 }
 
-//////////////////////////////////////
-
-
-/////////// Screen Scaling ///////////
+//////////// Artwork Scaling ///////////
+// Use these tags to scale ONLY the artwork //
 
 #iphone-twox {
   zoom: 0.86;
@@ -28,10 +27,9 @@
   -moz-transform: scale(1.41);
 }
 
-//////////////////////////////////////
+////////////////////////////////////////
 
-//////////// Type Styles /////////////
-
+// iPhone artwork outer div //
 #iphone-twox {
   width: 640px;
   height: 1136px;
@@ -39,11 +37,52 @@
   margin: 244px 77px;
 }
 
+// iPhone phone dummy //
+.iphone-container {
+  width: 680px;
+  height: 1390px;
+  position: relative;
+
+  display: -webkit-inline-box;
+  display: inline-table;
+  float: left;
+  margin: 40px 0 0 40px;
+}
+
+// Android artwork outer div //
 #android-twox {
   width: 642px;
   height: 1136px;
   position: absolute;
   margin: 161px 44px;
+}
+
+// Android phone dummy //
+.android-container {
+  width: 1030px;
+  height: 2040px;
+  position: relative;
+
+  display: -webkit-inline-box;
+  display: inline-table;
+  float: left;
+  margin: 190px 0 0 40px;
+}
+
+//////////////////////////////////////
+
+
+
+
+
+
+//////////// Type Styles /////////////
+
+// Styling for hard returns from Tiny MCE publishing tool //
+br {
+  display: block;
+  margin: 24px 0;
+  content: " ";
 }
 
 h1.headline {
@@ -56,12 +95,21 @@ h1.headline {
 }
 
 h2.title {
-  color: #383838;
+  color: $text-color;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   margin: 0;
   width: 384px;
+}
+
+.headline-area {
+  display: block;
+}
+
+.headline-area img {
+  display: block;
+  height: 40px;
 }
 
 .story p {
@@ -72,23 +120,9 @@ span.bold {
   font-weight: 700;
 }
 
-br {
-  display: block;
-  margin: 24px 0;
-  content: " ";
-}
-
 //////////////////////////////////////
 
-.headline-area {
-  display: block;
-}
-
-.headline-area img {
-  display: block;
-  height: 40px;
-
-}
+//////////////// Nav bar /////////////
 
 .twox-nav-bar {
   background-color: #00182D;
@@ -99,6 +133,7 @@ br {
   z-index: 2;
 }
 
+// The 'client name' string should come from the server //
 h1.client-name {
   color: #FFFFFF;
   display: block;
@@ -110,7 +145,39 @@ h1.client-name {
   height: 100%;
 }
 
-////////// Scroll Bars /////////////
+//////////////// Tab bar /////////////
+
+.twox-tab-bar {
+  background-color: #00182D;
+  bottom: 0;
+  height: 98px;
+  opacity: 0.9;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+//////////////////////////////////////
+
+// Background image 'styles' for News content. This will be different for "Events" and "Action Required." //
+// These attributes take the image in the story, scale it up in the background, center it, blur and saturate //
+.background-image-twox {
+  height: 1136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 640px;
+  z-index: -1;
+}
+
+.background-image-twox img {
+  height: 1136px;
+  width: auto;
+  filter: saturate(200%) blur(40px);
+  -webkit-filter: saturate(200%) blur(40px); /* Chrome, Safari, Opera */
+}
+
+////////// Scroll Bars ///////////////
 
 ::-webkit-scrollbar{
   width: 12px;
@@ -129,7 +196,7 @@ h1.client-name {
   background-color: transparent;
 }
 
-///////////////////////////////////
+//////////////////////////////////////
 
 .content-box {
   background-color: #FFFFFF;
@@ -167,6 +234,7 @@ h1.client-name {
   position: absolute;
 }
 
+// "Close button" dummied for preview, Jeroen will replace in iOS //
 #close-button {
   background-image: url("../images/close_button@2x.png");
   height: 58px;
@@ -182,23 +250,13 @@ a.inline-link {
   color: $button-preselect-blue;
 }
 
-.twox-tab-bar {
-  background-color: #00182D;
-  bottom: 0;
-  height: 98px;
-  opacity: 0.9;
-  position: absolute;
-  width: 100%;
-  z-index: 10;
-}
-
 .story {
   line-height: 32px;
   margin: 0 40px 40px;
 }
 
 .resource-link {
-  background-color: #f2f2f2;
+  background-color: $background-gray;
   border: 0px solid transparent;
   border-radius: 8px;height: 120px;
   margin-bottom: 36px;
@@ -240,46 +298,3 @@ img#switch {
   float: right;
 }
 
-.background-image-twox {
-  height: 1136px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 640px;
-  z-index: -1;
-}
-
-.background-image-twox img {
-  height: 1136px;
-  //margin-left: 680px;
-  width: auto;
-  filter: saturate(200%) blur(40px);
-  -webkit-filter: saturate(200%) blur(40px); /* Chrome, Safari, Opera */
-}
-
-img {
-  top: 0;
-  right: 0;
-}
-
-.iphone-container {
-  width: 680px;
-  height: 1390px;
-  position: relative;
-
-  display: -webkit-inline-box;
-  display: inline-table;
-  float: left;
-  margin: 40px 0 0 40px;
-}
-
-.android-container {
-  width: 1030px;
-  height: 2040px;
-  position: relative;
-
-  display: -webkit-inline-box;
-  display: inline-table;
-  float: left;
-  margin: 190px 0 0 40px;
-}
