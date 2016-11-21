@@ -1,0 +1,143 @@
+@import 'styles';
+
+
+////////////////////////////////////////
+
+// Background image 'styles' for News content. This will be different for "Events" and "Action Required." //
+// These attributes take the image in the story, scale it up in the background, center it, blur and saturate //
+.emergency-background-image-twox {
+  background-color: #630002;
+  height: 1136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 640px;
+  z-index: -1;
+}
+
+//////////// Type Styles /////////////
+
+h2.title-white {
+  color: #FFFFFF;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  width: 384px;
+}
+
+//////////////////////////////////////
+
+.emergency-content-box {
+  border-radius: 8px;
+  border: 0px solid transparent;
+  height: 860px;
+  margin: 40px;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  position: relative;
+  box-shadow: 0px 0px 30px #2b0001;
+  width: 560px;
+  z-index: 2;
+}
+
+.emergency-content-box {
+  @include emergency-gradient (emergency-grad);
+}
+
+.emergency-title-background {
+  padding: 36px 40px 28px 40px;
+  width: 480px;
+}
+
+p.emergency-text {
+  color: #FFFFFF;
+  font-size: 26px;
+  line-height: 36px;
+  margin-top: 0;
+}
+
+.emergency-date {
+  margin: 80px 40px;
+  color: #FFFFFF;
+  font-weight: 100;
+}
+
+.inline-image {
+  height: 270px;
+  margin: 40px 40px 18px;
+  position: relative;
+}
+
+.inline-image img {
+  border-radius: 6px;
+  border: 0px solid transparent;
+  top: 0;
+  position: absolute;
+}
+
+// "Close button" dummied for preview, Jeroen will replace in iOS //
+#news-close-button {
+  background-image: url("../images/close_button.png");
+  height: 58px;
+  margin: 28px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 58px;
+}
+
+a.inline-link {
+  text-decoration: none;
+  color: $button-preselect-blue;
+}
+
+.story {
+  line-height: 32px;
+  margin: 0 40px 40px;
+}
+
+.resource-link {
+  background-color: $background-gray;
+  border: 0px solid transparent;
+  border-radius: 8px;height: 120px;
+  margin-bottom: 36px;
+  width: 100%;
+}
+
+.resource-link img {
+  float: left;
+  height: 74px;
+  width: auto;
+  padding: 20px;
+}
+
+p.resource-link-text {
+  float: left;
+  line-height: 120px;
+  margin: 0;
+}
+
+.switch-button {
+  height: 54px;
+}
+
+p#switch-button-text {
+  font-size: 28px;
+  float: left;
+  margin: 0;
+  line-height: 38px;
+}
+
+img#gradient {
+  margin-left: -40px;
+}
+
+img#switch {
+  margin: 0;
+  width: 80px;
+  height: 40px;
+  float: right;
+}
+
