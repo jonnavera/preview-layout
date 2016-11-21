@@ -1,6 +1,8 @@
 @import 'styles';
 @import 'news-mobile.css';
-@import "action_mobile.css";
+@import 'action_mobile.css';
+@import 'events_mobile.css';
+
 
 /////////// Phone frame AND artwork Scaling ///////////
 // Use these tags to scale each phone frame and the artwork at the same time //
@@ -93,15 +95,6 @@ h1.headline {
   margin: 0;
   text-align: center;
   vertical-align: middle;
-}
-
-h2.title {
-  color: $text-color;
-  font-size: 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  margin: 0;
-  width: 384px;
 }
 
 .headline-area {
@@ -209,6 +202,7 @@ h1.client-name {
   overflow-x: hidden;
   overflow-y: overlay;
   position: relative;
+  box-shadow: 0px 0px 30px #666666;
   width: 560px;
   z-index: 2;
 }
@@ -237,7 +231,7 @@ h1.client-name {
 
 // "Close button" dummied for preview, Jeroen will replace in iOS //
 #news-close-button {
-  background-image: url("../images/close_button@2x.png");
+  background-image: url("../images/close_button.png");
   height: 58px;
   margin: 28px;
   position: absolute;

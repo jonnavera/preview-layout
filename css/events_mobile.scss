@@ -1,11 +1,11 @@
 @import 'styles';
 
 
-//////////////////////////////////////
+////////////////////////////////////////
 
 // Background image 'styles' for News content. This will be different for "Events" and "Action Required." //
 // These attributes take the image in the story, scale it up in the background, center it, blur and saturate //
-.action-background-image-twox {
+.events-background-image-twox {
   height: 1136px;
   overflow: hidden;
   position: absolute;
@@ -14,23 +14,53 @@
   z-index: -1;
 }
 
-.action-background-image-twox img {
+.events-background-image-twox img {
   height: 1136px;
   width: auto;
-  filter: grayscale(100%) blur(40px);
-  -webkit-filter: grayscale(100%) blur(40px); /* Chrome, Safari, Opera */
+  filter: brightness(0.9);
+  -webkit-filter: brightness(0.9); /* Chrome, Safari, Opera */
 }
 
 
 //////////// Type Styles /////////////
 
-h2.title-black {
-  color: $text-color;
+h2.title-white {
+  color: #FFFFFF;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   margin: 0;
   width: 384px;
+}
+
+.day-date-container {
+  display: flex;
+  margin-top: 14px;
+}
+
+.start-end-container {
+  display: flex;
+}
+
+h4.event-day,
+h4.event-date,
+h5.start-time,
+h5.end-time {
+  color: #FFFFFF;
+  float: left;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  margin: 0;
+}
+
+h4.event-day {
+  padding-right: 8px;
+  text-transform: uppercase;
+}
+
+h5.start-time {
+  padding-right: 8px;
 }
 
 //////////////////////////////////////
@@ -49,37 +79,50 @@ h2.title-black {
   z-index: 2;
 }
 
-.title-background {
+.events-title-background {
   padding: 36px 40px 28px 40px;
   width: 480px;
 }
 
-.title-background {
-  @include news-gradient (news-grad);
+.events-title-background {
+  @include events-gradient (events-grad);
 }
 
-.inline-image {
+.event-address {
+  background: #F2F2F2;
+  color: #666666;
+  margin: 40px 36px 0 40px;
+  padding: 24px;
+  font-size: 24px;
+}
+
+br.address-break {
+  margin: 0;
+}
+
+.inline-map-fpo {
   height: 270px;
-  margin: 40px 40px 18px;
+  margin: 0 40px 18px;
   position: relative;
 }
 
-.inline-image img {
-  border-radius: 6px;
-  border: 0px solid transparent;
+.inline-map-fpo img {
+  border: 1px solid #E06C26;
+  border-radius: 0 0 6px 6px;
   top: 0;
   position: absolute;
 }
 
-// "Close button" dummied for preview, Jeroen will replace in iOS //
-#action-close-button {
-  background-image: url("../images/close_button@2x.png");
+
+#event-share-button {
+  background-image: url(../images/share_button.png);
   height: 58px;
   margin: 28px;
-  position: absolute;
-  right: 0;
-  top: 62px;
+  position: relative;
+  right: 36px;
+  top: -142px;
   width: 58px;
+  float: right;
 }
 
 a.inline-link {
@@ -134,52 +177,4 @@ img#switch {
   height: 40px;
   float: right;
 }
-
-/////// Action Required Styles ///////
-
-div#action-required-title {
-  height: 26px;
-  padding: 28px 42px 20px;
-  color: #FFFFFF;
-  border-radius: 0 4px 4px 0;
-  line-height: 26px;
-  font-weight: 200;
-  font-size: 28px;
-
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ed5e6d+0,f28468+100 */
-  background: #ed5e6d; /* Old browsers */
-  background: -moz-linear-gradient(left,  #ed5e6d 0%, #f28468 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  #ed5e6d 0%,#f28468 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  #ed5e6d 0%,#f28468 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed5e6d', endColorstr='#f28468',GradientType=1 ); /* IE6-9 */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

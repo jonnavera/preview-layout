@@ -6,3 +6,12 @@
   background: linear-gradient(45deg,  #d9dfe9 26%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9dfe9', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+@mixin events-gradient ($events-grad) {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e06c26+45,ffd278+100 */
+  background: #e06c26; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #e06c26 45%, #ffd278 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,  #e06c26 45%,#ffd278 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,  #e06c26 45%,#ffd278 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e06c26', endColorstr='#ffd278',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
