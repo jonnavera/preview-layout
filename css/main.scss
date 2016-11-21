@@ -1,5 +1,6 @@
 @import 'styles';
-
+@import 'news-mobile.css';
+@import "action_mobile.css";
 
 /////////// Phone frame AND artwork Scaling ///////////
 // Use these tags to scale each phone frame and the artwork at the same time //
@@ -161,7 +162,7 @@ h1.client-name {
 
 // Background image 'styles' for News content. This will be different for "Events" and "Action Required." //
 // These attributes take the image in the story, scale it up in the background, center it, blur and saturate //
-.background-image-twox {
+.news-background-image-twox {
   height: 1136px;
   overflow: hidden;
   position: absolute;
@@ -170,7 +171,7 @@ h1.client-name {
   z-index: -1;
 }
 
-.background-image-twox img {
+.news-background-image-twox img {
   height: 1136px;
   width: auto;
   filter: saturate(200%) blur(40px);
@@ -235,7 +236,7 @@ h1.client-name {
 }
 
 // "Close button" dummied for preview, Jeroen will replace in iOS //
-#close-button {
+#news-close-button {
   background-image: url("../images/close_button@2x.png");
   height: 58px;
   margin: 28px;

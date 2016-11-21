@@ -16,8 +16,6 @@
  *  `em` units.
  */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,200,100,300,300italic,400italic,500,500italic,700,700italic);
-@import url(news-mobile.css);
-@import url(action_mobile.css);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -377,114 +375,7 @@ body {
   font-weight: 300;
   color: #383838; }
 
-.iphone-container {
-  zoom: 0.5;
-  -moz-transform: scale(0.5); }
-
-.android-container {
-  zoom: 0.305;
-  -moz-transform: scale(0.305); }
-
-#iphone-twox {
-  zoom: 0.86;
-  -moz-transform: scale(0.86); }
-
-#android-twox {
-  zoom: 1.41;
-  -moz-transform: scale(1.41); }
-
-#iphone-twox {
-  width: 640px;
-  height: 1136px;
-  position: absolute;
-  margin: 244px 77px; }
-
-.iphone-container {
-  width: 680px;
-  height: 1390px;
-  position: relative;
-  display: -webkit-inline-box;
-  display: inline-table;
-  float: left;
-  margin: 40px 0 0 40px; }
-
-#android-twox {
-  width: 642px;
-  height: 1136px;
-  position: absolute;
-  margin: 161px 44px; }
-
-.android-container {
-  width: 1030px;
-  height: 2040px;
-  position: relative;
-  display: -webkit-inline-box;
-  display: inline-table;
-  float: left;
-  margin: 190px 0 0 40px; }
-
-br {
-  display: block;
-  margin: 24px 0;
-  content: " "; }
-
-h1.headline {
-  color: #FFFFFF;
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  margin: 0;
-  text-align: center;
-  vertical-align: middle; }
-
-h2.title {
-  color: #383838;
-  font-size: 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  margin: 0;
-  width: 384px; }
-
-.headline-area {
-  display: block; }
-
-.headline-area img {
-  display: block;
-  height: 40px; }
-
-.story p {
-  font-size: 24px; }
-
-span.bold {
-  font-weight: 700; }
-
-.twox-nav-bar {
-  background-color: #00182D;
-  opacity: 0.9;
-  position: relative;
-  width: 100%;
-  height: 98px;
-  z-index: 2; }
-
-h1.client-name {
-  color: #FFFFFF;
-  display: block;
-  margin: 0;
-  position: relative;
-  font-size: 34px;
-  font-weight: 100;
-  text-align: center;
-  height: 100%; }
-
-.twox-tab-bar {
-  background-color: #00182D;
-  bottom: 0;
-  height: 98px;
-  opacity: 0.9;
-  position: absolute;
-  width: 100%;
-  z-index: 10; }
-
-.news-background-image-twox {
+.action-background-image-twox {
   height: 1136px;
   overflow: hidden;
   position: absolute;
@@ -492,25 +383,12 @@ h1.client-name {
   width: 640px;
   z-index: -1; }
 
-.news-background-image-twox img {
+.action-background-image-twox img {
   height: 1136px;
   width: auto;
-  filter: saturate(200%) blur(40px);
-  -webkit-filter: saturate(200%) blur(40px);
+  filter: grayscale(100%) blur(40px);
+  -webkit-filter: grayscale(100%) blur(40px);
   /* Chrome, Safari, Opera */ }
-
-::-webkit-scrollbar {
-  width: 12px; }
-
-::-webkit-scrollbar-thumb {
-  background-color: #d1d1d1;
-  border-radius: 8px; }
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #d1d1d1; }
-
-::-webkit-scrollbar-track {
-  background-color: transparent; }
 
 .content-box {
   background-color: #FFFFFF;
@@ -553,13 +431,13 @@ h1.client-name {
   top: 0;
   position: absolute; }
 
-#news-close-button {
+#action-close-button {
   background-image: url("../images/close_button@2x.png");
   height: 58px;
   margin: 28px;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 62px;
   width: 58px; }
 
 a.inline-link {
@@ -607,4 +485,24 @@ img#switch {
   height: 40px;
   float: right; }
 
-/*# sourceMappingURL=main.css.map */
+div#action-required-title {
+  height: 26px;
+  padding: 28px 42px 20px;
+  color: #FFFFFF;
+  border-radius: 0 4px 4px 0;
+  line-height: 26px;
+  font-weight: 200;
+  font-size: 28px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ed5e6d+0,f28468+100 */
+  background: #ed5e6d;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #ed5e6d 0%, #f28468 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ed5e6d 0%, #f28468 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ed5e6d 0%, #f28468 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed5e6d', endColorstr='#f28468',GradientType=1 );
+  /* IE6-9 */ }
+
+/*# sourceMappingURL=action_mobile.css.map */

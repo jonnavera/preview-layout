@@ -1,0 +1,174 @@
+@import 'styles';
+
+
+//////////////////////////////////////
+
+// Background image 'styles' for News content. This will be different for "Events" and "Action Required." //
+// These attributes take the image in the story, scale it up in the background, center it, blur and saturate //
+.action-background-image-twox {
+  height: 1136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 640px;
+  z-index: -1;
+}
+
+.action-background-image-twox img {
+  height: 1136px;
+  width: auto;
+  filter: grayscale(100%) blur(40px);
+  -webkit-filter: grayscale(100%) blur(40px); /* Chrome, Safari, Opera */
+}
+
+
+//////////////////////////////////////
+
+.content-box {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  border: 0px solid transparent;
+  height: 860px;
+  margin: 40px;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  position: relative;
+  width: 560px;
+  z-index: 2;
+}
+
+.title-background {
+  padding: 36px 40px 28px 40px;
+  width: 480px;
+}
+
+.title-background {
+  @include news-gradient (news-grad);
+}
+
+.inline-image {
+  height: 270px;
+  margin: 40px 40px 18px;
+  position: relative;
+}
+
+.inline-image img {
+  border-radius: 6px;
+  border: 0px solid transparent;
+  top: 0;
+  position: absolute;
+}
+
+// "Close button" dummied for preview, Jeroen will replace in iOS //
+#action-close-button {
+  background-image: url("../images/close_button@2x.png");
+  height: 58px;
+  margin: 28px;
+  position: absolute;
+  right: 0;
+  top: 62px;
+  width: 58px;
+}
+
+a.inline-link {
+  text-decoration: none;
+  color: $button-preselect-blue;
+}
+
+.story {
+  line-height: 32px;
+  margin: 0 40px 40px;
+}
+
+.resource-link {
+  background-color: $background-gray;
+  border: 0px solid transparent;
+  border-radius: 8px;height: 120px;
+  margin-bottom: 36px;
+  width: 100%;
+}
+
+.resource-link img {
+  float: left;
+  height: 74px;
+  width: auto;
+  padding: 20px;
+}
+
+p.resource-link-text {
+  float: left;
+  line-height: 120px;
+  margin: 0;
+}
+
+.switch-button {
+  height: 54px;
+}
+
+p#switch-button-text {
+  font-size: 28px;
+  float: left;
+  margin: 0;
+  line-height: 38px;
+}
+
+img#gradient {
+  margin-left: -40px;
+}
+
+img#switch {
+  margin: 0;
+  width: 80px;
+  height: 40px;
+  float: right;
+}
+
+/////// Action Required Styles ///////
+
+div#action-required-title {
+  height: 26px;
+  padding: 28px 42px 20px;
+  color: #FFFFFF;
+  border-radius: 0 4px 4px 0;
+  line-height: 26px;
+  font-weight: 200;
+  font-size: 28px;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ed5e6d+0,f28468+100 */
+  background: #ed5e6d; /* Old browsers */
+  background: -moz-linear-gradient(left,  #ed5e6d 0%, #f28468 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #ed5e6d 0%,#f28468 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #ed5e6d 0%,#f28468 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed5e6d', endColorstr='#f28468',GradientType=1 ); /* IE6-9 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
