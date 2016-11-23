@@ -440,7 +440,7 @@ h2.title-black {
   position: absolute; }
 
 #news-close-button {
-  background-image: url("../images/close_button.png");
+  background-image: url("../images/close_button.svg");
   height: 58px;
   margin: 28px;
   position: absolute;

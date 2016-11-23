@@ -455,10 +455,12 @@ h5.start-time {
 
 .event-address {
   background: #F2F2F2;
+  border-radius: 8px 8px 0 0;
   color: #666666;
   margin: 40px 36px 0 40px;
   padding: 24px;
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 400; }
 
 br.address-break {
   margin: 0; }
@@ -470,12 +472,12 @@ br.address-break {
 
 .inline-map-fpo img {
   border: 1px solid #E06C26;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 8px 8px;
   top: 0;
   position: absolute; }
 
 #event-share-button {
-  background-image: url(../images/share_button.png);
+  background-image: url(../images/share_button.svg);
   height: 58px;
   margin: 28px;
   position: relative;

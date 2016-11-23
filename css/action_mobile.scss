@@ -22,16 +22,6 @@
 }
 
 
-//////////// Type Styles /////////////
-
-h2.title-black {
-  color: $text-color;
-  font-size: 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  margin: 0;
-  width: 384px;
-}
 
 //////////////////////////////////////
 
@@ -73,7 +63,7 @@ h2.title-black {
 
 // "Close button" dummied for preview, Jeroen will replace in iOS //
 #action-close-button {
-  background-image: url("../images/close_button@2x.png");
+  background-image: url("../images/close_button.svg");
   height: 58px;
   margin: 28px;
   position: absolute;

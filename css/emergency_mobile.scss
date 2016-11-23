@@ -15,16 +15,6 @@
   z-index: -1;
 }
 
-//////////// Type Styles /////////////
-
-h2.title-white {
-  color: #FFFFFF;
-  font-size: 36px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  margin: 0;
-  width: 384px;
-}
 
 //////////////////////////////////////
 
@@ -58,6 +48,13 @@ p.emergency-text {
   margin-top: 0;
 }
 
+.emergency-time {
+  font-size: 28px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0 0 24px 0;
+}
+
 .emergency-date {
   margin: 80px 40px;
   color: #FFFFFF;
@@ -79,7 +76,7 @@ p.emergency-text {
 
 // "Close button" dummied for preview, Jeroen will replace in iOS //
 #news-close-button {
-  background-image: url("../images/close_button.png");
+  background-image: url("../images/close_button.svg");
   height: 58px;
   margin: 28px;
   position: absolute;

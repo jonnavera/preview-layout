@@ -375,108 +375,210 @@ body {
   font-weight: 300;
   color: #383838; }
 
-.emergency-background-image-twox {
-  background-color: #630002;
+body {
+  background-color: #f7f7f7;
+  margin: 80px; }
+
+.ee-center {
+  margin: 80px; }
+
+.news-web-background-image-twox {
+  display: none; }
+
+.news-background-image-twox img {
   height: 1136px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 640px;
-  z-index: -1; }
+  width: auto;
+  filter: saturate(200%) blur(40px);
+  -webkit-filter: saturate(200%) blur(40px);
+  /* Chrome, Safari, Opera */ }
 
-.emergency-content-box {
-  border-radius: 8px;
-  border: 0px solid transparent;
-  height: 860px;
-  margin: 40px;
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: overlay;
+h2.web-title-black {
+  color: #383838;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  width: 400px; }
+
+.stack-image {
+  width: 500px;
   position: relative;
-  box-shadow: 0px 0px 30px #2b0001;
-  width: 560px;
-  z-index: 2; }
+  bottom: -4px; }
 
-.emergency-content-box {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#af1f23+56,e41e26+100 */
-  background: #af1f23;
-  /* Old browsers */
-  background: -moz-linear-gradient(45deg, #980004 56%, #e41e26 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #980004 56%, #e41e26 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #980004 56%, #e41e26 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#af1f23', endColorstr='#e41e26',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */ }
-
-.emergency-title-background {
-  padding: 36px 40px 28px 40px;
-  width: 480px; }
-
-p.emergency-text {
-  color: #FFFFFF;
-  font-size: 26px;
-  line-height: 36px;
-  margin-top: 0; }
-
-.emergency-time {
-  font-size: 28px;
-  font-weight: 500;
-  color: #FFFFFF;
-  margin: 0 0 24px 0; }
-
-.emergency-date {
-  margin: 80px 40px;
-  color: #FFFFFF;
-  font-weight: 100; }
-
-.inline-image {
-  height: 270px;
-  margin: 40px 40px 18px;
-  position: relative; }
-
-.inline-image img {
+.new-stack {
+  background: #FFFFFF;
   border-radius: 6px;
+  height: 128px;
+  width: 500px; }
+
+.web-container {
+  width: 500px;
+  height: 118px;
+  position: absolute;
+  z-index: 200; }
+
+.web-toggle-target {
+  height: 92px;
+  position: absolute;
+  width: 100%;
+  margin: -28px;
+  z-index: 100; }
+
+.web-title-container {
   border: 0px solid transparent;
-  top: 0;
+  position: relative;
+  overflow: auto;
+  margin: 0; }
+
+img#button-gradient {
+  width: 500px;
   position: absolute; }
 
-#news-close-button {
-  background-image: url("../images/close_button.svg");
-  height: 58px;
-  margin: 28px;
+button {
+  background-color: #FFFFFF;
+  border: none;
+  width: 50%;
+  float: left;
+  height: 44px;
+  outline: none; }
+
+button.dismiss-button,
+button.open-button {
+  color: #2d9be0; }
+
+button.open-button {
+  border-right: 1px solid #f2f2f2; }
+
+.web-content-box {
+  background-color: #FFFFFF;
+  border-radius: 0 0 6px 6px;
+  display: none;
+  width: 500px;
+  padding-top: 1px; }
+
+.web-title-background {
+  padding: 22px 28px;
+  border-radius: 6px 6px 0 0; }
+
+.web-title-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d9dfe9+26,ffffff+100 */
+  background: #d9dfe9;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #d9dfe9 26%, #ffffff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #d9dfe9 26%, #ffffff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #d9dfe9 26%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9dfe9', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+
+.web-inline-image {
+  height: 266px;
+  margin: 10px 28px 0;
+  position: relative; }
+
+.web-inline-image img {
+  border-radius: 4px;
+  border: 0px solid transparent;
+  top: 0;
+  position: absolute;
+  width: 444px; }
+
+#web-news-button {
+  background-size: 28px 28px;
+  height: 28px;
+  margin: 18px;
   position: absolute;
   right: 0;
   top: 0;
-  width: 58px; }
+  width: 28px; }
 
-a.inline-link {
-  text-decoration: none;
-  color: #2d9be0; }
+.web-news-close-button {
+  background-image: url("../images/close_button.svg"); }
 
-.story {
-  line-height: 32px;
-  margin: 0 40px 40px; }
+.web-news-open-button {
+  background-image: url("../images/open_button.svg"); }
 
-.resource-link {
+a.web-inline-link {
+  border-radius: 4px;
+  border-bottom: 4px solid rgba(45, 155, 224, 0.25);
+  color: #666666;
+  text-decoration: none; }
+
+.timeline {
+  width: 500px;
+  min-height: 800px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  top: 10px;
+  position: relative; }
+
+a:active {
+  background: rgba(45, 155, 224, 0.25);
+  border-radius: 4px;
+  border-bottom: 0;
+  padding: 0 0 2px 0; }
+
+p.web-body {
+  margin: 0; }
+
+.web-story {
+  color: #666666;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  width: 444px;
+  margin: 0 -56px 0 28px; }
+
+.web-space {
+  display: block;
+  margin: 14px 0;
+  content: " "; }
+
+.web-resource-link {
   background-color: #f2f2f2;
   border: 0px solid transparent;
   border-radius: 8px;
-  height: 120px;
-  margin-bottom: 36px;
-  width: 100%; }
-
-.resource-link img {
   float: left;
-  height: 74px;
-  width: auto;
-  padding: 20px; }
+  height: 32px;
+  margin: 24px 0;
+  padding: 10px; }
 
-p.resource-link-text {
+.web-resource-link:hover {
+  background-color: rgba(45, 155, 224, 0.25); }
+
+.web-link {
+  color: #2d9be0; }
+
+p#web-switch-button-text {
+  color: #2d9be0;
+  display: inline-block;
   float: left;
-  line-height: 120px;
-  margin: 0; }
+  margin: 0 0 10px 0;
+  position: relative;
+  top: -4px; }
+
+img#web-switch {
+  float: right;
+  height: 22px;
+  position: relative;
+  top: -4px;
+  padding-right: 22px; }
+
+.web-resource-link img {
+  float: left;
+  height: 32px;
+  line-height: 32px; }
+
+p.web-resource-link-text {
+  display: inline-block;
+  line-height: 32px;
+  margin: 0;
+  position: relative;
+  left: 8px;
+  padding-right: 18px; }
 
 .switch-button {
   height: 54px; }
@@ -487,8 +589,9 @@ p#switch-button-text {
   margin: 0;
   line-height: 38px; }
 
-img#gradient {
-  margin-left: -40px; }
+img#web-gradient {
+  width: 500px;
+  margin-left: -28px; }
 
 img#switch {
   margin: 0;
@@ -496,4 +599,4 @@ img#switch {
   height: 40px;
   float: right; }
 
-/*# sourceMappingURL=emergency_mobile.css.map */
+/*# sourceMappingURL=news_web.css.map */

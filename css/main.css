@@ -16,10 +16,11 @@
  *  `em` units.
  */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,200,100,300,300italic,400italic,500,500italic,700,700italic);
-@import url(news-mobile.css);
+@import url(news_mobile.css);
 @import url(action_mobile.css);
 @import url(events_mobile.css);
 @import url(emergency_mobile.css);
+@import url(news_web.css);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -438,6 +439,30 @@ h1.headline {
   text-align: center;
   vertical-align: middle; }
 
+h2.title-black {
+  color: #383838;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  width: 384px; }
+
+h2.title-white {
+  color: #FFFFFF;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  width: 384px; }
+
+h2.emergency-title-white {
+  color: #FFFFFF;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  width: 384px; }
+
 .headline-area {
   display: block; }
 
@@ -549,13 +574,14 @@ h1.client-name {
   position: absolute; }
 
 #news-close-button {
-  background-image: url("../images/close_button.png");
-  height: 58px;
+  background-image: url(../images/close_button.svg);
+  height: 59px;
   margin: 28px;
   position: absolute;
   right: 0;
   top: 0;
-  width: 58px; }
+  width: 58px;
+  background-repeat: no-repeat; }
 
 a.inline-link {
   text-decoration: none;
