@@ -9,6 +9,7 @@ $(document).ready(function(){
         $(".stack-image").fadeOut(50);
         $(".web-title-container").css( "border-radius", "4px" );
         $(".web-title-container").css( "margin", "14px" );
+        $("h2").css( "width", "380px" );
     });
 
     //Swaps 'down arrow' icon and 'close icon'
@@ -27,6 +28,7 @@ $(document).ready(function(){
         $(".web-container").appendTo( $( ".timeline" ) );
         $(".web-title-container").css( "border-radius", "4px" );
         $(".web-title-container").css( "margin", "14px" );
+        $("h2").css( "width", "380px" );
         $(".web-container").effect( "slide", "fast" );
     });
 
@@ -38,6 +40,7 @@ $(document).ready(function(){
         $('#web-news-button').toggleClass('web-news-close-button web-news-open-button');
         $(".web-title-container").css( "border-radius", "4px" );
         $(".web-title-container").css( "margin", "14px" );
+        $("h2").css( "width", "380px" );
     });
 
 
