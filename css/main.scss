@@ -1,8 +1,10 @@
 @import 'styles';
 @import 'news_mobile.css';
 @import 'action_mobile.css';
+@import 'action_web.css';
 @import 'events_mobile.css';
 @import 'emergency_mobile.css';
+@import 'emergency_web.css';
 @import 'news_web.css';
 
 
@@ -111,6 +113,7 @@ h2.title-black {
   font-weight: 500;
   margin: 0;
   width: 384px;
+  display: inline-block;
 }
 
 h2.title-white {
@@ -120,6 +123,7 @@ h2.title-white {
   font-weight: 500;
   margin: 0;
   width: 384px;
+  display: inline-block;
 }
 
 h2.emergency-title-white {
@@ -129,6 +133,7 @@ h2.emergency-title-white {
   font-weight: 500;
   margin: 0;
   width: 384px;
+  display: inline-block;
 }
 
 .headline-area {

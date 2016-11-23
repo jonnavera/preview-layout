@@ -403,6 +403,16 @@ body {
   width: 560px;
   z-index: 2; }
 
+.read-unread-dot {
+  height: 20px;
+  width: 20px;
+  background: #9ae49a;
+  float: left;
+  margin-right: 10px;
+  border-radius: 8px;
+  position: relative;
+  top: 6px; }
+
 .title-background {
   padding: 36px 40px 28px 40px;
   width: 480px; }
@@ -485,14 +495,16 @@ img#switch {
   height: 40px;
   float: right; }
 
-div#action-required-title {
+#action-required-title {
   height: 26px;
   padding: 28px 42px 20px;
   color: #FFFFFF;
   border-radius: 0 4px 4px 0;
   line-height: 26px;
   font-weight: 200;
-  font-size: 28px;
+  font-size: 28px; }
+
+#action-required-title {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ed5e6d+0,f28468+100 */
   background: #ed5e6d;
   /* Old browsers */
@@ -502,7 +514,7 @@ div#action-required-title {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #ed5e6d 0%, #f28468 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed5e6d', endColorstr='#f28468',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed5e6d', endColorstr='#f28468', GradientType=1);
   /* IE6-9 */ }
 
 /*# sourceMappingURL=action_mobile.css.map */
