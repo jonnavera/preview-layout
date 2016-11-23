@@ -1,2 +1,7 @@
 .idea/workspace.xml
-.sass-cache
+
+.sass-cache/d103f41e5adb38b13b0a786ff1fcba180bc620ea/action_web copy.scssc
+.sass-cache/d103f41e5adb38b13b0a786ff1fcba180bc620ea/action_web.scssc
+.sass-cache/d103f41e5adb38b13b0a786ff1fcba180bc620ea/emergency_web.scssc
+.sass-cache/d103f41e5adb38b13b0a786ff1fcba180bc620ea/emergency_web_web.scssc
+.sass-cache/d103f41e5adb38b13b0a786ff1fcba180bc620ea/events_web copy.scssc

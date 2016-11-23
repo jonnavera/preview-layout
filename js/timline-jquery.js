@@ -12,11 +12,40 @@ $(document).ready(function(){
         $("h2").css( "width", "380px" );
     });
 
+    $("#web-action-button").click(function(){
+        $(".web-content-box").slideToggle('fast');
+        $(".status-bar").hide();
+        $(".new-stack").hide();
+        $(".web-container").appendTo( $( ".timeline" ) ).fadeIn('slow');
+        $(".stack-image").fadeOut(50);
+        $(".web-title-container").css( "border-radius", "4px" );
+        $(".web-title-container").css( "margin", "14px" );
+        $("h2").css( "width", "380px" );
+    });
+
+    $("#web-emergency-button").click(function(){
+        $(".web-content-box").slideToggle('fast');
+        $(".status-bar").hide();
+        $(".new-stack").hide();
+        $(".web-container").appendTo( $( ".web-timeline" ) ).fadeIn('slow');
+        $(".stack-image").fadeOut(50);
+        $(".web-title-container").css( "border-radius", "4px" );
+        $(".web-title-container").css( "margin", "14px" );
+        $("h2").css( "width", "380px" );
+    });
+
     //Swaps 'down arrow' icon and 'close icon'
-        $('#web-news-button').click(function() {
+    $('#web-news-button').click(function() {
         $('#web-news-button').toggleClass('web-news-close-button web-news-open-button');
     });
 
+    $('#web-action-button').click(function() {
+        $('#web-action-button').toggleClass('web-news-close-button web-news-open-button');
+    });
+
+    $('#web-emergency-button').click(function() {
+        $('#web-emergency-button').toggleClass('web-news-close-button web-news-open-button');
+    });
 
 
     //'Close' button: hide 'open' and 'dismiss', append truncated card to timeline, fade from stack, hide 'stack image'
@@ -38,6 +67,9 @@ $(document).ready(function(){
         $(".web-content-box").slideToggle('fast');
         $(".status-bar").hide();
         $('#web-news-button').toggleClass('web-news-close-button web-news-open-button');
+
+        $('#web-action-button').toggleClass('web-news-close-button web-news-open-button');
+
         $(".web-title-container").css( "border-radius", "4px" );
         $(".web-title-container").css( "margin", "14px" );
         $("h2").css( "width", "380px" );
