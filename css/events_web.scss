@@ -43,12 +43,45 @@ h2.web-title-black {
   width: 400px;
 }
 
-h3.web-author {
-  font-size: 14px;
-  font-weight: 300;
-  margin: 8px 0 0;
+.web-day-date-container {
+  display: flex;
+  margin-top: 8px;
 }
 
+.web-start-end-container {
+  display: flex;
+}
+
+h4.web-event-day,
+h4.web-event-date,
+h5.web-start-time,
+h5.web-end-time {
+  color: #FFFFFF;
+  float: left;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+h4.web-event-day {
+  padding-right: 8px;
+  text-transform: uppercase;
+}
+
+h5.web-start-time {
+  padding-right: 8px;
+}
+
+
+/////Google Map/////////////////////////////////
+
+#map {
+  //height: 270px;
+  border: 1px solid orange;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
 
 //////////////////////////////////////
 
@@ -126,13 +159,13 @@ button.dismiss-button {
   margin-bottom: 80px;
 }
 
-.web-title-background {
+.web-event-title-background {
   padding: 22px 28px;
   border-radius: 6px 6px 0 0;
 }
 
-.web-title-background {
-  @include news-gradient (news-grad);
+.web-event-title-background {
+  @include events-gradient (events-grad);
 }
 
 .web-inline-image {
@@ -179,7 +212,7 @@ a.web-inline-link {
 
 .timeline {
   width: 500px;
-  min-height: 800px;
+  min-height: 200px;
   background: #FFFFFF;
   border-radius: 6px;
   top: 14px;

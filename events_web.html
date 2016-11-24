@@ -4,7 +4,21 @@
         <link type="text/css" rel="stylesheet" href="css/main.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvv0hcGkbPCXielN409kg_LedJ8fs4oVU"></script>
         <script src="js/timline-jquery.js"></script>
+        <script src="js/jquery.googlemap.js"></script>
+        <!--<script src="js/map-jquery.js"></script>-->
+
+        <script type="text/javascript">
+            $(function() {
+                $("#map").googleMap();
+                $("#map").addMarker({
+                    address: "101 Montgomery Ave. San Francisco", // Postale Address
+                    icon: './images/map_dot.png'
+                });
+            })
+        </script>
+
     </head>
 
     <body>
@@ -15,11 +29,20 @@
             <div class="web-container">
                 <div class="web-title-container">
 
-                    <div class="web-title-background">
+                    <div class="web-event-title-background">
                         <!--<div class="web-toggle-target"></div>-->
-                        <h2 class="web-title-black">Employee Communication: The Missing Piece in the HR Technology Landscape</h2>
-                        <h3 class="web-author">Steve Adams</h3>
-                        <div id="web-news-button" class="web-news-open-button"></div>
+                        <h2 class="web-title-white">Employee Communication: The Missing Piece in the HR Technology Landscape</h2>
+
+                        <div class="web-day-date-container">
+                            <h4 class="web-event-day">Friday</h4>
+                            <h4 class="web-event-date"> 10/16/16</h4>
+                        </div>
+                        <div class="web-start-end-container">
+                            <h5 class="web-start-time">3:00pm </h5>
+                            <h5 class="web-end-time">4:00pm</h5>
+                        </div>
+
+                        <div id="web-events-button" class="web-events-open-button"></div>
                     </div>
                     <div class="status-bar"><img id="button-gradient" src="images/edge-gradient.png">
                         <button class="open-button">open</button>
@@ -28,7 +51,7 @@
                 </div>
 
                 <div class="web-content-box">
-                    <div class="web-inline-image"><img src="images/news_inline.jpg"></div
+                    <div id="map" style="width: 444px; height: 270px;"></div
                     <div class="web-story">
                         <p class="web-body">Open Enrollment is a <span class="web-bold">once-a-year opportunity</span> for you to make changes to your health care benefits and to enroll or
                             re-enroll in the <a href="#" class="web-inline-link">Flexible Spending Plan</a>, <a href="#" class="web-inline-link">Health Savings Account</a> and
@@ -48,12 +71,11 @@
 
                         <div class="web-switch-button">
                             <img id="web-gradient" src="images/edge-gradient.png">
-                            <a href="#" class="web-link"><p id="web-switch-button-text">news notifications</p>
+                            <a href="#" class="web-link"><p id="web-switch-button-text">events notifications</p>
                                 <img id="web-switch" src="images/dummy-switch.svg"></a>
                         </div>
                     </div>
                 </div>
-                <div class="news-web-background-image-twox"><img src="images/news_inline.jpg"></div>
             </div>
 
         </div><!--new stack -->

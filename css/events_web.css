@@ -400,10 +400,35 @@ h2.web-title-black {
   margin: 0;
   width: 400px; }
 
-h3.web-author {
-  font-size: 14px;
+.web-day-date-container {
+  display: flex;
+  margin-top: 8px; }
+
+.web-start-end-container {
+  display: flex; }
+
+h4.web-event-day,
+h4.web-event-date,
+h5.web-start-time,
+h5.web-end-time {
+  color: #FFFFFF;
+  float: left;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
-  margin: 8px 0 0; }
+  margin: 0; }
+
+h4.web-event-day {
+  padding-right: 8px;
+  text-transform: uppercase; }
+
+h5.web-start-time {
+  padding-right: 8px; }
+
+#map {
+  border: 1px solid orange;
+  border-radius: 6px;
+  margin-bottom: 18px; }
 
 .stack-image {
   width: 500px;
@@ -467,21 +492,21 @@ button.dismiss-button {
   float: left;
   margin-bottom: 80px; }
 
-.web-title-background {
+.web-event-title-background {
   padding: 22px 28px;
   border-radius: 6px 6px 0 0; }
 
-.web-title-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d9dfe9+26,ffffff+100 */
-  background: #d9dfe9;
+.web-event-title-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e06c26+45,ffd278+100 */
+  background: #e06c26;
   /* Old browsers */
-  background: -moz-linear-gradient(45deg, #d9dfe9 26%, #ffffff 100%);
+  background: -moz-linear-gradient(45deg, #e06c26 45%, #ffd278 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #d9dfe9 26%, #ffffff 100%);
+  background: -webkit-linear-gradient(45deg, #e06c26 45%, #ffd278 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #d9dfe9 26%, #ffffff 100%);
+  background: linear-gradient(45deg, #e06c26 45%, #ffd278 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9dfe9', endColorstr='#ffffff',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e06c26', endColorstr='#ffd278',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
 
 .web-inline-image {
@@ -519,7 +544,7 @@ a.web-inline-link {
 
 .timeline {
   width: 500px;
-  min-height: 800px;
+  min-height: 200px;
   background: #FFFFFF;
   border-radius: 6px;
   top: 14px;
