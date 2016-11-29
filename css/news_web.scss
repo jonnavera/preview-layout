@@ -63,13 +63,15 @@ h3.web-author {
   border-radius: 6px;
   height: 148px;
   width: 500px;
+  display: table;
+  margin-bottom: 8px;
 }
 
 .web-container {
   width: 500px;
-  height: 118px;
-  position: absolute;
+  //height: 118px;
   z-index: 200;
+  display: inline-block;
 }
 
 .web-toggle-target {
@@ -85,6 +87,8 @@ h3.web-author {
   position: relative;
   overflow: auto;
   margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 img#button-gradient {
@@ -104,6 +108,7 @@ button {
 button.dismiss-button,
 button.open-button {
   color: $button-preselect-blue;
+  width: 250px;
 }
 
 button.open-button {
@@ -121,7 +126,7 @@ button.dismiss-button {
   // jQuery sets display to visible
   display: none;
   width: 444px;
-  padding: 1px 28px 0 28px;
+  padding: 8px 28px 0 28px;
   float: left;
   margin-bottom: 80px;
 }
@@ -150,14 +155,16 @@ button.dismiss-button {
 }
 
 // "Close button" dummied for preview, Jeroen will replace in iOS //
-#web-news-button {
+.web-news-open-button,
+.web-news-close-button {
   background-size: 28px 28px;
   height: 28px;
   margin: 18px;
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: relative;
+  top: -100px;
   width: 28px;
+  float: right;
+  left: 28px;
 }
 
 .web-news-close-button {
@@ -179,11 +186,10 @@ a.web-inline-link {
 
 .timeline {
   width: 500px;
-  min-height: 200px;
+  min-height: 600px;
   background: #FFFFFF;
   border-radius: 6px;
-  top: 14px;
-  position: relative;
+  display: inline-block;
   margin: 0 80px;
 }
 

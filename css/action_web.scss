@@ -63,13 +63,15 @@ h3.web-author {
   border-radius: 6px;
   height: 148px;
   width: 500px;
+  display: table;
+  margin-bottom: 8px;
 }
 
 .web-container {
   width: 500px;
-  height: 118px;
-  position: absolute;
+  //height: 118px;
   z-index: 200;
+  display: inline-block;
 }
 
 .web-toggle-target {
@@ -121,7 +123,7 @@ button.dismiss-button {
   // jQuery sets display to visible
   display: none;
   width: 444px;
-  padding: 1px 28px 0 28px;
+  padding: 8px 28px 0 28px;
   float: left;
   margin-bottom: 80px;
 }
@@ -150,7 +152,8 @@ button.dismiss-button {
 }
 
 // "Close button" dummied for preview, Jeroen will replace in iOS //
-#web-action-button {
+.web-action-open-button,
+.web-action-close-button {
   background-size: 28px 28px;
   height: 28px;
   margin: 18px;
@@ -160,11 +163,11 @@ button.dismiss-button {
   width: 28px;
 }
 
-.web-news-close-button {
+.web-action-close-button {
   background-image: url("../images/close_button.svg");
 }
 
-.web-news-open-button {
+.web-action-open-button {
   background-image: url("../images/open_button.svg");
 }
 
@@ -179,11 +182,10 @@ a.web-inline-link {
 
 .timeline {
   width: 500px;
-  min-height: 200px;
+  min-height: 600px;
   background: #FFFFFF;
   border-radius: 6px;
-  top: 14px;
-  position: relative;
+  display: inline-block;
   margin: 0 80px;
 }
 

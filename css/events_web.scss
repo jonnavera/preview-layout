@@ -32,6 +32,14 @@ body {
   -webkit-filter: saturate(200%) blur(40px); /* Chrome, Safari, Opera */
 }
 
+img.random-map-image {
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  opacity: 0.18;
+  top: 0;
+}
+
 //////////// Type Styles /////////////
 
 h2.web-title-black {
@@ -39,17 +47,18 @@ h2.web-title-black {
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  margin: 0;
-  width: 400px;
+  margin: 0 0 0 56px;
+  width: 354px;
 }
 
 .web-day-date-container {
   display: flex;
-  margin-top: 8px;
+  margin: 8px 0 0 58px;
 }
 
 .web-start-end-container {
   display: flex;
+  margin: 0 0 0 58px;
 }
 
 h4.web-event-day,
@@ -65,12 +74,12 @@ h5.web-end-time {
 }
 
 h4.web-event-day {
-  padding-right: 8px;
+  padding-right: 4px;
   text-transform: uppercase;
 }
 
 h5.web-start-time {
-  padding-right: 8px;
+  padding-right: 4px;
 }
 
 
@@ -96,13 +105,15 @@ h5.web-start-time {
   border-radius: 6px;
   height: 148px;
   width: 500px;
+  display: table;
+  margin-bottom: 8px;
 }
 
 .web-container {
   width: 500px;
-  height: 118px;
-  position: absolute;
+  //height: 118px;
   z-index: 200;
+  display: inline-block;
 }
 
 .web-toggle-target {
@@ -113,11 +124,12 @@ h5.web-start-time {
   z-index: 100;
 }
 
-.web-title-container {
+.web-title-container,
+.web-title-container-1,
+.web-title-container-2 {
   border: 0px solid transparent;
   position: relative;
-  overflow: auto;
-  margin: 0;
+  //overflow: auto;
 }
 
 img#button-gradient {
@@ -135,8 +147,11 @@ button {
 }
 
 button.dismiss-button,
+button.dismiss-button-2,
+button.dismiss-button-3,
 button.open-button {
   color: $button-preselect-blue;
+  width: 250px;
 }
 
 button.open-button {
@@ -154,14 +169,14 @@ button.dismiss-button {
   // jQuery sets display to visible
   display: none;
   width: 444px;
-  padding: 1px 28px 0 28px;
+  padding: 8px 28px 0 28px;
   float: left;
   margin-bottom: 80px;
 }
 
 .web-event-title-background {
-  padding: 22px 28px;
   border-radius: 6px 6px 0 0;
+  padding: 22px 28px 22px 20px;
 }
 
 .web-event-title-background {
@@ -182,15 +197,31 @@ button.dismiss-button {
   width: 444px;
 }
 
+div#events-icon {
+  background-image: url(../images/events_icon_wht.svg);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  float: left;
+  height: 50px;
+  margin: 0 8px 0 0;
+  position: relative;
+  left: -4px;
+  top: -4px;
+  width: 50px;
+  z-index: 10px;
+}
+
 // "Close button" dummied for preview, Jeroen will replace in iOS //
-#web-news-button {
+.web-news-open-button,
+.web-news-close-button {
   background-size: 28px 28px;
   height: 28px;
   margin: 18px;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 4px;
   width: 28px;
+  z-index: 200;
 }
 
 .web-news-close-button {
@@ -212,11 +243,10 @@ a.web-inline-link {
 
 .timeline {
   width: 500px;
-  min-height: 200px;
+  min-height: 600px;
   background: #FFFFFF;
   border-radius: 6px;
-  top: 14px;
-  position: relative;
+  display: inline-block;
   margin: 0 80px;
 }
 
@@ -321,3 +351,69 @@ img#switch {
   float: right;
 }
 
+
+
+//////////////// Prototype ///////////////////
+
+.web-container-1,
+.web-container-2,
+.web-container-3 {
+  width: 500px;
+  //height: 118px;
+  z-index: 200;
+}
+
+.web-container-1 {
+  display: inline-block;
+}
+
+.web-container-2 {
+  display: none;
+}
+
+.web-container-3 {
+  display: none;
+}
+
+.web-title-container-1,
+.web-title-container-2,
+.web-title-container-3 {
+  overflow: hidden;
+}
+
+.web-title-container-1 {
+  position: relative;
+  height: 152px;
+}
+
+.web-title-container-2 {
+  height: 152px;
+}
+
+.web-title-container-3 {
+  height: 152px;
+}
+
+.web-news-open-button,
+.web-news-close-button {
+  background-size: 28px 28px;
+  height: 28px;
+  margin: 18px;
+  position: relative;
+  right: 0;
+  top: 40px;
+  width: 28px;
+}
+
+.web-action-close-button {
+  background-image: url("../images/close_button.svg");
+}
+
+.web-action-open-button {
+  background-image: url("../images/open_button.svg");
+}
+
+.web-event-title-background,
+.web-title-background {
+  height: 152px;
+}

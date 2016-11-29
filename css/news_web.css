@@ -414,13 +414,14 @@ h3.web-author {
   background: #FFFFFF;
   border-radius: 6px;
   height: 148px;
-  width: 500px; }
+  width: 500px;
+  display: table;
+  margin-bottom: 8px; }
 
 .web-container {
   width: 500px;
-  height: 118px;
-  position: absolute;
-  z-index: 200; }
+  z-index: 200;
+  display: inline-block; }
 
 .web-toggle-target {
   height: 92px;
@@ -433,7 +434,9 @@ h3.web-author {
   border: 0px solid transparent;
   position: relative;
   overflow: auto;
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 img#button-gradient {
   width: 500px;
@@ -449,7 +452,8 @@ button {
 
 button.dismiss-button,
 button.open-button {
-  color: #2d9be0; }
+  color: #2d9be0;
+  width: 250px; }
 
 button.open-button {
   border-right: 1px solid #f2f2f2;
@@ -463,7 +467,7 @@ button.dismiss-button {
   border-radius: 0 0 6px 6px;
   display: none;
   width: 444px;
-  padding: 1px 28px 0 28px;
+  padding: 8px 28px 0 28px;
   float: left;
   margin-bottom: 80px; }
 
@@ -496,14 +500,16 @@ button.dismiss-button {
   position: absolute;
   width: 444px; }
 
-#web-news-button {
+.web-news-open-button,
+.web-news-close-button {
   background-size: 28px 28px;
   height: 28px;
   margin: 18px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 28px; }
+  position: relative;
+  top: -100px;
+  width: 28px;
+  float: right;
+  left: 28px; }
 
 .web-news-close-button {
   background-image: url("../images/close_button.svg"); }
@@ -519,11 +525,10 @@ a.web-inline-link {
 
 .timeline {
   width: 500px;
-  min-height: 200px;
+  min-height: 600px;
   background: #FFFFFF;
   border-radius: 6px;
-  top: 14px;
-  position: relative;
+  display: inline-block;
   margin: 0 80px; }
 
 a:active {
