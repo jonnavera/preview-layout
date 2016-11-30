@@ -408,7 +408,8 @@ h3.web-author {
 .stack-image {
   width: 500px;
   position: relative;
-  bottom: -4px; }
+  top: -20px;
+}
 
 .new-stack {
   background: #FFFFFF;

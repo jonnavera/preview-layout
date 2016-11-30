@@ -12,15 +12,15 @@
 /////////// Phone frame AND artwork Scaling ///////////
 // Use these tags to scale each phone frame and the artwork at the same time //
 
-.iphone-container {
-  zoom: 0.5;
-  -moz-transform: scale(0.5);
-}
-
-.android-container {
-  zoom: 0.305;
-  -moz-transform: scale(0.305);
-}
+//.iphone-container {
+//  zoom: 0.5;
+//  -moz-transform: scale(0.5);
+//}
+//
+//.android-container {
+//  zoom: 0.305;
+//  -moz-transform: scale(0.305);
+//}
 
 //.web-container {
 //  zoom: 0.305;
@@ -30,15 +30,15 @@
 //////////// Artwork Scaling ///////////
 // Use these tags to scale ONLY the artwork //
 
-#iphone-twox {
-  zoom: 0.86;
-  -moz-transform: scale(0.86);
-}
-
-#android-twox {
-  zoom: 1.41;
-  -moz-transform: scale(1.41);
-}
+//#iphone-twox {
+//  zoom: 0.86;
+//  -moz-transform: scale(0.86);
+//}
+//
+//#android-twox {
+//  zoom: 1.41;
+//  -moz-transform: scale(1.41);
+//}
 
 ////////////////////////////////////////
 

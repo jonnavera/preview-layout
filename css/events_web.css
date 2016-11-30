@@ -441,7 +441,7 @@ h5.web-start-time {
 .stack-image {
   width: 500px;
   position: relative;
-  bottom: -4px; }
+  top: -20px; }
 
 .new-stack {
   background: #FFFFFF;
@@ -668,13 +668,16 @@ img#switch {
   z-index: 200; }
 
 .web-container-1 {
-  display: inline-block; }
+  display: inline-block;
+  position: relative; }
 
 .web-container-2 {
-  display: none; }
+  display: none;
+  position: relative; }
 
 .web-container-3 {
-  display: none; }
+  display: none;
+  position: relative; }
 
 .web-title-container-1,
 .web-title-container-2,
@@ -710,5 +713,71 @@ img#switch {
 .web-event-title-background,
 .web-title-background {
   height: 152px; }
+
+.timestamp {
+  color: #094356;
+  font-size: 12px;
+  font-weight: 400; }
+
+ul {
+  margin: 22px 0px; }
+
+ul li {
+  position: relative;
+  left: -24px; }
+
+li:before {
+  content: '\00b7';
+  font-size: 80px;
+  line-height: 12px;
+  float: left;
+  position: relative;
+  top: 2px;
+  right: 2px; }
+
+li {
+  color: #094356;
+  list-style: none;
+  margin: 12px 0;
+  display: none; }
+
+div#solid-line {
+  width: 2px;
+  min-height: 600px;
+  position: absolute;
+  margin-left: 23px; }
+
+div#solid-line {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f2f2+81,ffffff+100&1+81,0+100 */
+  background: -moz-linear-gradient(top, #f2f2f2 81%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f2f2f2 81%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f2f2f2 81%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#00ffffff',GradientType=0 );
+  /* IE6-9 */ }
+
+li#unique-date-dummy-1 {
+  height: 182px; }
+
+.empty-stack {
+  height: 196px;
+  background-color: #666666;
+  width: 500px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  position: relative;
+  top: 206px;
+  margin-top: -206px; }
+
+p#stack-end-message {
+  display: none;
+  margin: 0;
+  line-height: 158px;
+  color: #FFFFFF;
+  font-weight: 100;
+  text-align: center;
+  font-size: 34px; }
 
 /*# sourceMappingURL=events_web.css.map */

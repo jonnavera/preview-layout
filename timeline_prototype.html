@@ -25,7 +25,10 @@
 
     <div class="ee-center">
 
-        <img class="stack-image" src="images/stack_artwork_3left.svg">
+        <div class="empty-stack">
+            <img class="stack-image" src="images/stack_artwork_3left.svg">
+            <p id="stack-end-message">You are up to date!</p>
+        </div>
 
             <div class="web-container-1">
                 <!--Truncated card 1-->
@@ -74,6 +77,8 @@
                         </div>
                     </div>
                 </div>
+
+
 
                 <div class="web-container-2">
                     <div class="web-title-container-2">
@@ -164,7 +169,13 @@
 
             </div>
         <!--Timeline block-->
-        <div class="timeline"></div>
+        <div class="timeline">
+            <div id="solid-line"></div>
+            <ul>
+                <li id="unique-date-dummy-1" class="timestamp"><p class="day">Today</p><p class="date"></p><p class="time"></p><div id="append-spot-1"></div></li>
+                <li id="unique-date-dummy-2" class="timestamp"><p class="day">Yesterday</p><p class="date"></p><p class="time"></p><div id="append-spot-2"></div></li>
+            </ul>
+        </div>
 
     </div>
 

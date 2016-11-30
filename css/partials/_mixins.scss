@@ -33,3 +33,11 @@
   background: linear-gradient(45deg,  #980004 56%,#e41e26 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#af1f23', endColorstr='#e41e26',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+@mixin line-gradient ($line-grad) {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f2f2+81,ffffff+100&1+81,0+100 */
+  background: -moz-linear-gradient(top,  rgba(242,242,242,1) 81%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(242,242,242,1) 81%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(242,242,242,1) 81%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}

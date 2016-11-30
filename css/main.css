@@ -383,22 +383,6 @@ body {
   font-weight: 300;
   color: #383838; }
 
-.iphone-container {
-  zoom: 0.5;
-  -moz-transform: scale(0.5); }
-
-.android-container {
-  zoom: 0.305;
-  -moz-transform: scale(0.305); }
-
-#iphone-twox {
-  zoom: 0.86;
-  -moz-transform: scale(0.86); }
-
-#android-twox {
-  zoom: 1.41;
-  -moz-transform: scale(1.41); }
-
 #iphone-twox {
   width: 640px;
   height: 1136px;
