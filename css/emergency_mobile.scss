@@ -74,7 +74,11 @@ p.emergency-text {
   position: absolute;
 }
 
-// "Close button" dummied for preview, Jeroen will replace in iOS //
+.emergency-position {
+  position: relative;
+  top: 20px;
+}
+
 #news-close-button {
   background-image: url("../images/close_button.svg");
   height: 58px;

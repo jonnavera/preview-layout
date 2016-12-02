@@ -417,8 +417,6 @@ body {
 .status-bar-1,
 .status-bar-2,
 .status-bar-3 {
-  display: inline-block;
-  margin: 0 0 8px 0;
   z-index: 1000; }
 
 br {
@@ -528,6 +526,13 @@ h1.client-name {
 
 ::-webkit-scrollbar-track {
   background-color: transparent; }
+
+.time-published {
+  float: right;
+  position: relative;
+  justify-content: flex-end;
+  font-size: 10px;
+  font-weight: 400; }
 
 .title-background {
   padding: 36px 40px 28px 40px;

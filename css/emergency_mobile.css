@@ -442,6 +442,10 @@ p.emergency-text {
   top: 0;
   position: absolute; }
 
+.emergency-position {
+  position: relative;
+  top: 20px; }
+
 #news-close-button {
   background-image: url("../images/close_button.svg");
   height: 58px;

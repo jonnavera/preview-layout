@@ -403,22 +403,26 @@ h2.web-title-black {
 h3.web-author {
   font-size: 14px;
   font-weight: 300;
-  margin: 8px 0 0; }
+  margin: 8px 0 0 0 58px; }
+
+#news-time-published {
+  top: 36px;
+  left: 72px; }
 
 .stack-image {
   width: 500px;
   position: relative;
-  top: -20px; }
+  bottom: -4px; }
 
 .new-stack {
-  background: #FFFFFF;
+  background: #666666;
   border-radius: 6px;
   height: 148px;
   width: 500px;
   display: table;
   margin-bottom: 8px; }
 
-.web-container {
+.web-news-container {
   width: 500px;
   z-index: 200;
   display: inline-block; }
@@ -430,17 +434,22 @@ h3.web-author {
   margin: -28px;
   z-index: 100; }
 
-.web-title-container {
+.web-news-title-container {
   border: 0px solid transparent;
   position: relative;
   overflow: auto;
   margin: 0;
   overflow-x: hidden;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  height: 152px; }
 
 img#button-gradient {
   width: 500px;
   position: absolute; }
+
+.news-position {
+  position: relative;
+  top: 1px; }
 
 button {
   background-color: #FFFFFF;
@@ -471,11 +480,12 @@ button.dismiss-button {
   float: left;
   margin-bottom: 80px; }
 
-.web-title-background {
+.web-news-title-background {
   padding: 22px 28px;
-  border-radius: 6px 6px 0 0; }
+  border-radius: 6px 6px 0 0;
+  height: 108px; }
 
-.web-title-background {
+.web-news-title-background {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d9dfe9+26,ffffff+100 */
   background: #d9dfe9;
   /* Old browsers */
@@ -500,13 +510,26 @@ button.dismiss-button {
   position: absolute;
   width: 444px; }
 
+div#news-icon {
+  background-image: url(../images/news_icon_blk.svg);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  float: left;
+  height: 50px;
+  margin: 0 8px 0 0;
+  position: relative;
+  left: -4px;
+  top: -4px;
+  width: 50px;
+  z-index: 10px; }
+
 .web-news-open-button,
 .web-news-close-button {
   background-size: 28px 28px;
   height: 28px;
   margin: 18px;
   position: relative;
-  top: -100px;
+  top: -88px;
   width: 28px;
   float: right;
   left: 28px; }
@@ -529,7 +552,7 @@ a.web-inline-link {
   background: #FFFFFF;
   border-radius: 6px;
   display: inline-block;
-  margin: 0 80px; }
+  margin: 10px 0 0 0; }
 
 a:active {
   background: rgba(45, 155, 224, 0.25);

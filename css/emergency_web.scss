@@ -46,7 +46,7 @@ h2.web-title-white {
 h3.web-author {
   font-size: 14px;
   font-weight: 300;
-  margin: 8px 0 0;
+  margin: 8px 0 0 58px;
 }
 
 
@@ -55,11 +55,11 @@ h3.web-author {
 .stack-image {
   width: 500px;
   position: relative;
-  top: -20px;
+  bottom: -4px;
 }
 
 .new-stack {
-  background: #FFFFFF;
+  background: #666666;
   border-radius: 6px;
   height: 148px;
   width: 500px;
@@ -73,9 +73,15 @@ h3.web-author {
   z-index: 200;
 }
 
-.web-emergency-container {
+.emergency-background-color {
   @include emergency-gradient (emergency-grad);
 }
+
+.emergency-background-color {
+  float: left;
+  border-radius: 6px;
+}
+
 
 .web-toggle-target {
   height: 92px;
@@ -99,7 +105,7 @@ h3.web-author {
 }
 
 .web-emergency-date {
-  margin-top: 60px;
+  margin: 60px 0;
   font-size: 10px;
 }
 
@@ -132,15 +138,13 @@ button.dismiss-button {
   border-radius: 0 0 6px 0;
 }
 
-.web-content-box {
-  background-color: #FFFFFF;
+.web-emergency-content-box {
   border-radius: 0 0 6px 6px;
   // jQuery sets display to visible
   display: none;
   width: 444px;
   padding: 8px 28px 0 28px;
   float: left;
-  margin-bottom: 80px;
 }
 
 .web-emergency-title-background {
@@ -161,6 +165,18 @@ button.dismiss-button {
   top: 0;
   position: absolute;
   width: 444px;
+}
+
+div#emergency-icon {
+  background-image: url(../images/emergency_icon_wht.svg);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  float: left;
+  height: 50px;
+  position: relative;
+  width: 34px;
+  right: 8px;
+  background-position: -8px;
 }
 
 // "Close button" dummied for preview, Jeroen will replace in iOS //
@@ -198,7 +214,7 @@ a.web-inline-link {
   background: #FFFFFF;
   border-radius: 6px;
   display: inline-block;
-  margin: 0 80px;
+  margin: 10px 80px;
 }
 
 ///////////////////////////////////////////////
@@ -218,10 +234,9 @@ p.web-body {
   color: #FFFFFF;
   display: inline-block;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 22px;
   width: 428px;
-  padding: 0 44px 30px 28px;
 }
 
 .web-space {
