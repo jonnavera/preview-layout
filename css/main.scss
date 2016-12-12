@@ -1,12 +1,8 @@
 @import 'styles';
 @import 'news_mobile.css';
 @import 'action_mobile.css';
-@import 'action_web.css';
 @import 'events_mobile.css';
-@import 'events_web.css';
 @import 'emergency_mobile.css';
-@import 'emergency_web.css';
-@import 'news_web.css';
 
 
 /////////// Phone frame AND artwork Scaling ///////////
@@ -43,44 +39,43 @@
 ////////////////////////////////////////
 
 // iPhone artwork outer div //
-#iphone-twox {
-  width: 640px;
-  height: 1136px;
-  position: absolute;
-  margin: 244px 77px;
-}
+//#iphone-twox {
+//  width: 640px;
+//  height: 1136px;
+//  position: absolute;
+//  margin: 244px 77px;
+//}
+//
+//// iPhone phone dummy //
+//.iphone-container {
+//  width: 680px;
+//  height: 1390px;
+//  position: relative;
+//
+//  display: -webkit-inline-box;
+//  display: inline-table;
+//  float: left;
+//}
+//
+//// Android artwork outer div //
+//#android-twox {
+//  width: 642px;
+//  height: 1136px;
+//  position: absolute;
+//  margin: 161px 44px;
+//}
 
-// iPhone phone dummy //
-.iphone-container {
-  width: 680px;
-  height: 1390px;
-  position: relative;
-
-  display: -webkit-inline-box;
-  display: inline-table;
-  float: left;
-  margin: 40px 0 0 40px;
-}
-
-// Android artwork outer div //
-#android-twox {
-  width: 642px;
-  height: 1136px;
-  position: absolute;
-  margin: 161px 44px;
-}
-
-// Android phone dummy //
-.android-container {
-  width: 1030px;
-  height: 2040px;
-  position: relative;
-
-  display: -webkit-inline-box;
-  display: inline-table;
-  float: left;
-  margin: 190px 0 0 40px;
-}
+//// Android phone dummy //
+//.android-container {
+//  width: 1030px;
+//  height: 2040px;
+//  position: relative;
+//
+//  display: -webkit-inline-box;
+//  display: inline-table;
+//  float: left;
+//  margin: 190px 0 0 40px;
+//}
 
 //////////////////////////////////////
 
