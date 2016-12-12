@@ -1,4 +1,4 @@
-# preview-layout
+# truncated-cards-for-dave
 
 This is the HTML and CSS replication of the mobile output from the Rhino publishing tool. All artwork is scalable with iPhone and Android versions. See comments in main.scss on how to scale.
 
