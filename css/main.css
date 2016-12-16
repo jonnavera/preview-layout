@@ -18,12 +18,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,200,100,300,300italic,400italic,500,500italic,700,700italic);
 @import url(news_mobile.css);
 @import url(action_mobile.css);
-@import url(action_web.css);
 @import url(events_mobile.css);
-@import url(events_web.css);
 @import url(emergency_mobile.css);
-@import url(emergency_web.css);
-@import url(news_web.css);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -382,36 +378,6 @@ body {
   font-size: 14px;
   font-weight: 300;
   color: #383838; }
-
-#iphone-twox {
-  width: 640px;
-  height: 1136px;
-  position: absolute;
-  margin: 244px 77px; }
-
-.iphone-container {
-  width: 680px;
-  height: 1390px;
-  position: relative;
-  display: -webkit-inline-box;
-  display: inline-table;
-  float: left;
-  margin: 40px 0 0 40px; }
-
-#android-twox {
-  width: 642px;
-  height: 1136px;
-  position: absolute;
-  margin: 161px 44px; }
-
-.android-container {
-  width: 1030px;
-  height: 2040px;
-  position: relative;
-  display: -webkit-inline-box;
-  display: inline-table;
-  float: left;
-  margin: 190px 0 0 40px; }
 
 .status-bar,
 .status-bar-1,
