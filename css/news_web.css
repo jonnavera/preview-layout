@@ -22,6 +22,8 @@ html {
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
+
+
   /* 2 */ }
 
 /**
@@ -376,11 +378,7 @@ body {
   color: #383838; }
 
 body {
-  background-color: #f7f7f7;
-  margin: 80px; }
-
-.ee-center {
-  margin: 60px 80px 0; }
+  background-color: #f7f7f7; }
 
 .news-web-background-image-twox {
   display: none; }
@@ -474,7 +472,6 @@ button.dismiss-button {
 .web-content-box {
   background-color: #FFFFFF;
   border-radius: 0 0 6px 6px;
-  display: none;
   width: 444px;
   padding: 8px 28px 0 28px;
   float: left;
@@ -483,7 +480,7 @@ button.dismiss-button {
 .web-news-title-background {
   padding: 22px 28px;
   border-radius: 6px 6px 0 0;
-  height: 108px; }
+  height: 110px; }
 
 .web-news-title-background {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d9dfe9+26,ffffff+100 */
@@ -500,8 +497,7 @@ button.dismiss-button {
 
 .web-inline-image {
   height: 266px;
-  margin: 10px 0 0 0;
-  position: relative; }
+  margin: 10px 0 0 0; }
 
 .web-inline-image img {
   border-radius: 4px;

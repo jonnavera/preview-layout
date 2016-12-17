@@ -9,7 +9,7 @@ body {
 }
 
 .ee-emergency-center {
-  margin: 60px 80px 0;
+  //margin: 60px 80px 0;
 }
 
 // Background image 'styles' for News content. This will be different for "Events" and "Action Required." //
@@ -141,7 +141,6 @@ button.dismiss-button {
 .web-emergency-content-box {
   border-radius: 0 0 6px 6px;
   // jQuery sets display to visible
-  //display: none;
   width: 444px;
   padding: 8px 28px 0 28px;
   float: left;
@@ -237,6 +236,7 @@ p.web-body {
   font-weight: 200;
   line-height: 22px;
   width: 428px;
+  margin-top: 20px;
 }
 
 .web-space {

@@ -379,9 +379,6 @@ body {
   background-color: #f7f7f7;
   margin: 80px; }
 
-.ee-emergency-center {
-  margin: 60px 80px 0; }
-
 .news-web-background-image-twox {
   display: none; }
 
@@ -486,7 +483,6 @@ button.dismiss-button {
 
 .web-emergency-content-box {
   border-radius: 0 0 6px 6px;
-  display: none;
   width: 444px;
   padding: 8px 28px 0 28px;
   float: left; }
@@ -564,7 +560,8 @@ p.web-body {
   font-size: 14px;
   font-weight: 200;
   line-height: 22px;
-  width: 428px; }
+  width: 428px;
+  margin-top: 20px; }
 
 .web-space {
   display: block;
