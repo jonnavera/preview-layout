@@ -1,0 +1,322 @@
+@import 'styles';
+
+
+////////////////////////////////////////
+
+body {
+  background-color: #f7f7f7;
+}
+
+.ee-center {
+  //margin: 60px 80px 0;
+}
+
+// Background image 'styles' for News content. This will be different for "Events" and "Action Required." //
+// These attributes take the image in the story, scale it up in the background, center it, blur and saturate //
+.news-web-background-image-twox {
+  //height: 1136px;
+  //overflow: hidden;
+  //position: absolute;
+  //top: 0;
+  //width: 640px;
+  //z-index: -1;
+
+  display: none;
+}
+
+.news-background-image-twox img {
+  height: 1136px;
+  width: auto;
+  filter: saturate(200%) blur(40px);
+  -webkit-filter: saturate(200%) blur(40px); /* Chrome, Safari, Opera */
+}
+
+//////////// Type Styles /////////////
+
+h2.web-title-black {
+  color: $text-color;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  width: 400px;
+}
+
+h3.web-author {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 8px 0 0 0 58px;
+}
+
+#news-time-published {
+  top: 36px;
+  left: 72px;
+}
+
+
+
+
+//////////////////////////////////////
+
+.stack-image {
+  width: 500px;
+  position: relative;
+  bottom: -4px;
+}
+
+.new-stack {
+  background: #666666;
+  border-radius: 6px;
+  height: 148px;
+  width: 500px;
+  display: table;
+  margin-bottom: 8px;
+}
+
+.web-news-container {
+  width: 500px;
+  //height: 118px;
+  z-index: 200;
+  display: inline-block;
+}
+
+.web-toggle-target {
+  height: 92px;
+  position: absolute;
+  width: 100%;
+  margin: -28px;
+  z-index: 100;
+}
+
+.web-news-title-container {
+  border: 0px solid transparent;
+  position: relative;
+  overflow: auto;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 152px;
+}
+
+img#button-gradient {
+  width: 500px;
+  position: absolute;
+}
+
+.news-position {
+  position: relative;
+  top: 1px;
+}
+
+button {
+  background-color: #FFFFFF;
+  border: none;
+  width: 50%;
+  float: left;
+  height: 44px;
+  outline: none;
+}
+
+button.dismiss-button,
+button.open-button {
+  color: $button-preselect-blue;
+  width: 250px;
+}
+
+button.open-button {
+  border-right: 1px solid #f2f2f2;
+  border-radius: 0 0 0 6px;
+}
+
+button.dismiss-button {
+  border-radius: 0 0 6px 0;
+}
+
+.web-content-box {
+  background-color: #FFFFFF;
+  border-radius: 0 0 6px 6px;
+  // jQuery sets display to visible
+  //display: none;
+  width: 444px;
+  padding: 8px 28px 0 28px;
+  float: left;
+  margin-bottom: 80px;
+}
+
+.web-news-title-background {
+  padding: 22px 28px;
+  border-radius: 6px 6px 0 0;
+  height: 110px;
+}
+
+.web-news-title-background {
+  @include news-gradient (news-grad);
+}
+
+.web-inline-image {
+  height: 266px;
+  margin: 10px 0 0 0;
+}
+
+.web-inline-image img {
+  border-radius: 4px;
+  border: 0px solid transparent;
+  top: 0;
+  position: absolute;
+  width: 444px;
+}
+
+div#news-icon {
+  background-image: url(../images/news_icon_blk.svg);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  float: left;
+  height: 50px;
+  margin: 0 8px 0 0;
+  position: relative;
+  left: -4px;
+  top: -4px;
+  width: 50px;
+  z-index: 10px;
+}
+
+// "Close button" dummied for preview, Jeroen will replace in iOS //
+.web-news-open-button,
+.web-news-close-button {
+  background-size: 28px 28px;
+  height: 28px;
+  margin: 18px;
+  position: relative;
+  top: -88px;
+  width: 28px;
+  float: right;
+  left: 28px;
+}
+
+.web-news-close-button {
+  background-image: url("../images/close_button.svg");
+}
+
+.web-news-open-button {
+  background-image: url("../images/open_button.svg");
+}
+
+a.web-inline-link {
+  border-radius: 4px;
+  border-bottom: 4px solid rgba(45, 155, 224, 0.25);
+  color: #666666;
+  text-decoration: none;
+}
+
+////// Timline ////////////////////////////////
+
+.timeline {
+  width: 500px;
+  min-height: 600px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 10px 0 0 0;
+}
+
+///////////////////////////////////////////////
+
+a:active {
+  background: rgba(45, 155, 224, 0.25);
+  border-radius: 4px;
+  border-bottom: 0;
+  padding: 0 0 2px 0;
+}
+
+p.web-body {
+  margin: 0;
+}
+
+.web-story {
+  color: #666666;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  width: 444px;
+  margin: 0 -56px 0 28px;
+}
+
+.web-space {
+  display: block;
+  margin: 14px 0;
+  content: " ";
+}
+
+.web-resource-link {
+  background-color: #f2f2f2;
+  border: 0px solid transparent;
+  border-radius: 8px;
+  float: left;
+  height: 32px;
+  margin: 24px 0;
+  padding: 10px;
+}
+
+.web-resource-link:hover {
+    background-color: rgba(45, 155, 224, 0.25);
+}
+
+.web-link{
+  color: $button-preselect-blue;
+}
+
+p#web-switch-button-text {
+  color: #2d9be0;
+  display: inline-block;
+  float: left;
+  margin: 0 0 10px 0;
+  position: relative;
+  top: -4px;
+}
+
+img#web-switch {
+  float: right;
+  height: 22px;
+  position: relative;
+  top: -6px;
+}
+
+.web-resource-link img {
+  float: left;
+  height: 32px;
+  line-height: 32px;
+}
+
+p.web-resource-link-text {
+  display: inline-block;
+  line-height: 32px;
+  margin: 0;
+  position: relative;
+  left: 8px;
+  padding-right: 18px;
+}
+
+.switch-button {
+  height: 54px;
+}
+
+p#switch-button-text {
+  font-size: 28px;
+  float: left;
+  margin: 0;
+  line-height: 38px;
+}
+
+img#web-gradient {
+  width: 500px;
+  margin-left: -28px;
+}
+
+img#switch {
+  margin: 0;
+  width: 80px;
+  height: 40px;
+  float: right;
+}
+
